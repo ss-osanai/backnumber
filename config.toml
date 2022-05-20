@@ -14,7 +14,6 @@ theme = "basic"
   post = "/:sections/:filename"
 
 [params]
-  # customCSS = ["css/notosansjp.css", "css/custom.css"]
 
 [[params.menu]]
   name = "post"
