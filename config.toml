@@ -1,0 +1,23 @@
+baseURL = "https://ss-osanai.github.io/backnumber/"
+languageCode = "ja-jp"
+canonifyurls = true
+publishDir = "docs"
+title = 'バックナンバー'
+
+defaultContentLanguage = "ja"
+hasCJKLanguage = true
+
+# theme = "minimal"
+theme = "basic"
+
+[Permalinks]
+  post = "/:sections/:filename"
+
+[params]
+  customCSS = ["css/notosansjp.css", "css/custom.css"]
+
+[[params.menu]]
+  name = "post"
+  url = "post/"
+
+
