@@ -1,6 +1,6 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: "{{ replace .Name "-" " " | title }}号 "
 date: {{ .Date }}
-draft: true
+draft: false
 ---
 
