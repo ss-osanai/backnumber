@@ -1,0 +1,3 @@
+---
+url: "search/entries.js"
+---
