@@ -3,13 +3,31 @@
 {{- trim (replace . "\n" " ") " " | replaceRE " +" " " | jsonify -}}
 {{- end }}
 
+{{/*
 var data = [
 {{- range $index, $page := .Site.Pages }}
+{{- if not (or (eq $page.FirstSection "post") (eq $page.Kind "section") (eq $page.Kind "taxonomy") (eq $page.Kind
+"term")) }}
+
 {
 url: {{ $page.Permalink | jsonify }},
 title: {{ $page.Title | jsonify }},
 date: {{ $page.Date | jsonify }},
 body: {{ template "escape" (printf "%s %s" $page.Title $page.Plain) }}
+},
+{{- end }}
+
+{{- end }}
+];
+*/}}
+
+var data = [
+{{- range where .Site.Pages "Section" "raw"}}
+{
+url: {{ .Permalink | jsonify }},
+title: {{ .Title | jsonify }},
+date: {{ .Date | jsonify }},
+body: {{ template "escape" (printf "%s %s" .Title .Plain) }}
 },
 {{- end }}
 ];
