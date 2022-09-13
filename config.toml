@@ -12,11 +12,17 @@ theme = "basic"
 
 [Permalinks]
   post = "/:sections/:filename"
+  raw = "/:sections/:year/:month/:filename"
 
 [params]
-
 [[params.menu]]
   name = "post"
   url = "post/"
+[[params.menu]]
+  name = "raw"
+  url = "raw/"
+[[params.menu]]
+  name = "search"
+  url = "search/"
 
 
