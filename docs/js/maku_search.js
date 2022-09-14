@@ -5,27 +5,53 @@ function search(query) {
   showResultCount(result.length, data.length);
 }
 
+var oldInput = null;
+const delim = ' ';
+const interval = 500;
+
+/**
+ * 検索クエリを半角スペースで分割した配列を返す。
+ * @param {String} input 
+ * @returns {Array}
+ */
+function splitInput(input) {
+  const queries = [];
+
+  if (input.length < 1) {
+    return queries;
+  }
+  const splittedInput = input.trim().split(delim);
+
+  /* 空文字列を除外する */
+  for (let i = 0; i < splittedInput.length; i++) {
+    if (splittedInput[i]) {
+      queries.push(splittedInput[i]);
+    }
+  }
+  return queries;
+}
+
+/**
+ * 
+ * @param {Array} splittedInput 
+ * @returns {Boolean}
+ */
+function isNewQueries(splittedInput) {
+  return (!oldInput || (splittedInput.join(delim) != oldInput.join(delim)));
+}
+
 /**
  * 
  * @param {String} rawQuery 
  * @returns {Array} - [{entry: entry, queries: [{query1, posBegin, posEnd}, {query2, posBegin, posEnd}...]}, ...]
  */
 function searchData(rawQuery) {
-  const delim = ' ';
   let result = [];
 
-  if (rawQuery.length < 1) {
-    return [];
-  }
+  const queries = splitInput(rawQuery);
 
-  const splittedQuery = rawQuery.trim().split(delim);
-  const queries = [];
-
-  /* 空文字列を除外する */
-  for (let i = 0; i < splittedQuery.length; i++) {
-    if (splittedQuery[i]) {
-      queries.push(splittedQuery[i]);
-    }
+  if (isNewQueries(queries)) {
+    oldInput = queries;
   }
   console.log(`queries: ${queries}`);
 
@@ -123,18 +149,63 @@ function showResultCount(count, total) {
   el.innerHTML = '<b>' + count + '</b> 件見つかりました（' + total + '件中）';
 }
 
-function searchWithHash() {
-  const hash = decodeURI(location.hash.substring(1));
-  search(hash);
+function clearResult() {
+  var el = document.getElementById('result');
+  el.innerHTML = '';
+}
 
-  const queryElem = document.getElementById('query');
-  if (queryElem.value !== hash) {
-    queryElem.value = hash;
+function clearResultCount() {
+  var el = document.getElementById('resultCount');
+  el.innerHTML = '';
+}
+
+
+// 入力中フラグ
+var compositionFlag = false;
+
+function searchWithHash() {
+  const hashStr = decodeURI(location.hash.substring(1));
+  console.log(`hashStr: ${hashStr}`);
+  console.log(`compositionFlag: ${compositionFlag}`);
+
+  // 空文字列の場合
+  if (!hashStr) {
+    clearResult();
+    clearResultCount();
+    return;
   }
+
+  function startSearch(hashStr) {
+    if (compositionFlag) {
+      return;
+    } else {
+      search(hashStr);
+
+      if (queryElem.value == '') {
+        queryElem.value = hashStr;
+      }
+    }
+  }
+
+  const queryElem = document.querySelector('input#query');
+
+  queryElem.addEventListener('compositionstart', () => {
+    compositionFlag = true;
+  });
+
+  queryElem.addEventListener('compositionend', () => {
+    compositionFlag = false;
+  });
+
+  startSearch(hashStr);
 }
 
 // ハッシュフラグメント付きの URL でページを開いたときに検索
 window.addEventListener('DOMContentLoaded', searchWithHash);
 
+var hashChangeTimeout;
 // ページ表示後にハッシュフラグメントが変化したら検索
-window.addEventListener('hashchange', searchWithHash);
+window.addEventListener('hashchange', () => {
+  clearTimeout(hashChangeTimeout);
+  hashChangeTimeout = setTimeout(searchWithHash, 500);
+});
