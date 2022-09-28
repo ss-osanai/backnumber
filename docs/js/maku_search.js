@@ -53,6 +53,7 @@ let allEntries = [];
   entries_2022,
 ].forEach(entries => {
   allEntries = allEntries.concat(entries);
+  console.log(Object.keys({ entries })[0]);
   console.log(`allEntries length: ${allEntries.length}`);
 });
 
