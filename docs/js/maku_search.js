@@ -1,16 +1,8 @@
-function search(query) {
-  const result = searchData(query);
-  const html = createHtml(result);
-  showResult(html);
-  showResultCount(result.length, data.length);
-}
-
-var oldInput = null;
+// キーワードのデリミタは半角スペースとする
 const delim = ' ';
-const interval = 500;
 
 /**
- * 検索クエリを半角スペースで分割した配列を返す。
+ * 検索クエリをデリミタで分割した配列を返す。
  * @param {String} input 
  * @returns {Array}
  */
@@ -22,7 +14,7 @@ function splitInput(input) {
   }
   const splittedInput = input.trim().split(delim);
 
-  /* 空文字列を除外する */
+  // 空文字列を除外する
   for (let i = 0; i < splittedInput.length; i++) {
     if (splittedInput[i]) {
       queries.push(splittedInput[i]);
@@ -31,14 +23,38 @@ function splitInput(input) {
   return queries;
 }
 
+let oldInput = null;
+
 /**
- * 
+ * 検索クエリが変更されているか
  * @param {Array} splittedInput 
  * @returns {Boolean}
  */
 function isNewQueries(splittedInput) {
   return (!oldInput || (splittedInput.join(delim) != oldInput.join(delim)));
 }
+
+// 全てのエントリを入れる配列
+let allEntries = [];
+// 各セクションごとの JSON を結合する
+[
+  entries_2007,
+  entries_2008,
+  entries_2009,
+  entries_2013,
+  entries_2014,
+  entries_2015,
+  entries_2016,
+  entries_2017,
+  entries_2018,
+  entries_2019,
+  entries_2020,
+  entries_2021,
+  entries_2022,
+].forEach(entries => {
+  allEntries = allEntries.concat(entries);
+  console.log(`allEntries length: ${allEntries.length}`);
+});
 
 /**
  * 
@@ -47,23 +63,17 @@ function isNewQueries(splittedInput) {
  */
 function searchData(rawQuery) {
   let result = [];
-
   const queries = splitInput(rawQuery);
 
   if (isNewQueries(queries)) {
     oldInput = queries;
   }
-  console.log(`queries: ${queries}`);
-
   const regexpList = queries.map(q => new RegExp(q, 'i'));
-  console.log(`regexpList: ${regexpList}`);
 
   /* 全ての query にマッチするエントリの配列 */
-  const matchedEntries = data.filter(entry =>
+  const matchedEntries = allEntries.filter(entry =>
     regexpList.every(re => re.test(entry.body))
   );
-  console.log(`matchedEntries.length: ${matchedEntries.length}`);
-  console.dir(matchedEntries);
 
   /*
     配列
@@ -91,6 +101,33 @@ function searchData(rawQuery) {
   })
   console.dir(result)
   return result;
+}
+
+/**
+ * 
+ * @param {Array} result - [{entry: entry, queries: [{query1, posBegin, posEnd}, {query2, posBegin, posEnd}...]}, ...]
+ * @returns 
+ */
+function createHtml(result) {
+  const htmls = result.map(x => createEntry(x.entry.url, x.entry.title, x.entry.body, x.queries))
+  return htmls.join('');
+}
+
+function showResult(html) {
+  var el = document.getElementById('result');
+  el.innerHTML = html;
+}
+
+function showResultCount(count, total) {
+  var el = document.getElementById('resultCount');
+  el.innerHTML = '<b>' + count + '</b> 件見つかりました（' + total + '件中）';
+}
+
+function search(query) {
+  const result = searchData(query);
+  const html = createHtml(result);
+  showResult(html);
+  showResultCount(result.length, allEntries.length);
 }
 
 /**
@@ -122,6 +159,14 @@ function createExcerpt(body, queries) {
   ).join('');
 }
 
+/**
+ * エントリの div タグを組み立てる
+ * @param {String} url エントリの URL
+ * @param {String} title エントリのタイトル
+ * @param {String} body エントリの本文
+ * @param {Array} queries 検索ワードの配列
+ * @returns 
+ */
 function createEntry(url, title, body, queries) {
   return '<div class="item">' +
     createTitle(url, title) +
@@ -129,25 +174,6 @@ function createEntry(url, title, body, queries) {
     '</div>';
 }
 
-/**
- * 
- * @param {Array} result - [{entry: entry, queries: [{query1, posBegin, posEnd}, {query2, posBegin, posEnd}...]}, ...]
- * @returns 
- */
-function createHtml(result) {
-  const htmls = result.map(x => createEntry(x.entry.url, x.entry.title, x.entry.body, x.queries))
-  return htmls.join('');
-}
-
-function showResult(html) {
-  var el = document.getElementById('result');
-  el.innerHTML = html;
-}
-
-function showResultCount(count, total) {
-  var el = document.getElementById('resultCount');
-  el.innerHTML = '<b>' + count + '</b> 件見つかりました（' + total + '件中）';
-}
 
 function clearResult() {
   var el = document.getElementById('result');
@@ -159,10 +185,13 @@ function clearResultCount() {
   el.innerHTML = '';
 }
 
-
 // 入力中フラグ
-var compositionFlag = false;
+let compositionFlag = false;
 
+/**
+ * 検索のエントリポイント
+ * @returns 
+ */
 function searchWithHash() {
   const hashStr = decodeURI(location.hash.substring(1));
   console.log(`hashStr: ${hashStr}`);
@@ -175,37 +204,31 @@ function searchWithHash() {
     return;
   }
 
-  function startSearch(hashStr) {
-    if (compositionFlag) {
-      return;
-    } else {
-      search(hashStr);
-
-      if (queryElem.value == '') {
-        queryElem.value = hashStr;
-      }
-    }
-  }
-
   const queryElem = document.querySelector('input#query');
-
   queryElem.addEventListener('compositionstart', () => {
     compositionFlag = true;
   });
-
   queryElem.addEventListener('compositionend', () => {
     compositionFlag = false;
   });
 
-  startSearch(hashStr);
+  if (compositionFlag) {
+    return;
+  } else {
+    search(hashStr);
+    if (queryElem.value === '') {
+      queryElem.value = hashStr;
+    }
+  }
 }
 
 // ハッシュフラグメント付きの URL でページを開いたときに検索
 window.addEventListener('DOMContentLoaded', searchWithHash);
 
-var hashChangeTimeout;
+const timeout = 500;
+let hashChangeTimeout;
 // ページ表示後にハッシュフラグメントが変化したら検索
 window.addEventListener('hashchange', () => {
   clearTimeout(hashChangeTimeout);
-  hashChangeTimeout = setTimeout(searchWithHash, 500);
+  hashChangeTimeout = setTimeout(searchWithHash, timeout);
 });

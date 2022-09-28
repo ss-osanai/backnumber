@@ -1,33 +1,22 @@
-{{- /* エスケープ処理（改行を空白化、前後の空白削除、連続する空白を集約） */}}
+{{/* エスケープ処理（改行を空白化、前後の空白削除、連続する空白を集約） */}}
 {{- define "escape" }}
 {{- trim (replace . "\n" " ") " " | replaceRE " +" " " | jsonify -}}
-{{- end }}
+{{- end -}}
 
-{{/*
-var data = [
-{{- range $index, $page := .Site.Pages }}
-{{- if not (or (eq $page.FirstSection "post") (eq $page.Kind "section") (eq $page.Kind "taxonomy") (eq $page.Kind
-"term")) }}
+{{/* cf) 2007 */}}
+{{- $year := .File.BaseFileName -}}
 
-{
-url: {{ $page.Permalink | jsonify }},
-title: {{ $page.Title | jsonify }},
-date: {{ $page.Date | jsonify }},
-body: {{ template "escape" (printf "%s %s" $page.Title $page.Plain) }}
-},
-{{- end }}
+var {{ printf "entries_%s" $year }} = [
+{{- range where .Site.RegularPages "Section" "raw" }}
 
-{{- end }}
-];
-*/}}
-
-var data = [
-{{- range where .Site.Pages "Section" "raw"}}
+{{- if (eq (substr .File.Dir 4 4) $year) }}
 {
 url: {{ .Permalink | jsonify }},
 title: {{ .Title | jsonify }},
 date: {{ .Date | jsonify }},
 body: {{ template "escape" (printf "%s %s" .Title .Plain) }}
 },
-{{- end }}
+{{ end -}}
+
+{{ end -}}
 ];
