@@ -41,6 +41,9 @@ let allEntries = [];
   entries_2007,
   entries_2008,
   entries_2009,
+  entries_2010,
+  entries_2011,
+  entries_2012,
   entries_2013,
   entries_2014,
   entries_2015,
@@ -53,7 +56,6 @@ let allEntries = [];
   entries_2022,
 ].forEach(entries => {
   allEntries = allEntries.concat(entries);
-  console.log(Object.keys({ entries })[0]);
   console.log(`allEntries length: ${allEntries.length}`);
 });
 
