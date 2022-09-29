@@ -144,7 +144,7 @@ function search(query) {
  * @returns {String}
  */
 function createTitle(url, title) {
-  return '<a class="item_title" href="' + url + '">' + title + '</a>';
+  return '<a class="item_title" href="' + url + '" target="_blank">' + title + '</a>';
 }
 
 /**
