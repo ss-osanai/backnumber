@@ -111,33 +111,6 @@ function searchData(rawQuery) {
 }
 
 /**
- * 
- * @param {Array} result - [{entry: entry, queries: [{query1, posBegin, posEnd}, {query2, posBegin, posEnd}...]}, ...]
- * @returns 
- */
-function createHtml(result) {
-  const htmls = result.map(x => createEntry(x.entry.url, x.entry.title, x.entry.body, x.queries))
-  return htmls.join('');
-}
-
-function showResult(html) {
-  var el = document.getElementById('result');
-  el.innerHTML = html;
-}
-
-function showResultCount(count, total) {
-  var el = document.getElementById('resultCount');
-  el.innerHTML = '<b>' + count + '</b> 件見つかりました（' + total + '件中）';
-}
-
-function search(query) {
-  const result = searchData(query);
-  const html = createHtml(result);
-  showResult(html);
-  showResultCount(result.length, allEntries.length);
-}
-
-/**
  * タイトルの HTML を作成する
  * @param {String} url 
  * @param {String} title 
@@ -181,6 +154,32 @@ function createEntry(url, title, body, queries) {
     '</div>';
 }
 
+/**
+ * 
+ * @param {Array} result - [{entry: entry, queries: [{query1, posBegin, posEnd}, {query2, posBegin, posEnd}...]}, ...]
+ * @returns 
+ */
+function createHtml(result) {
+  const htmls = result.map(x => createEntry(x.entry.url, x.entry.title, x.entry.body, x.queries))
+  return htmls.join('');
+}
+
+function showResult(html) {
+  var el = document.getElementById('result');
+  el.innerHTML = html;
+}
+
+function showResultCount(count, total) {
+  var el = document.getElementById('resultCount');
+  el.innerHTML = '<b>' + count + '</b> 件見つかりました（' + total + '件中）';
+}
+
+function search(query) {
+  const result = searchData(query);
+  const html = createHtml(result);
+  showResult(html);
+  showResultCount(result.length, allEntries.length);
+}
 
 function clearResult() {
   var el = document.getElementById('result');
@@ -234,6 +233,7 @@ window.addEventListener('DOMContentLoaded', searchWithHash);
 
 const timeout = 500;
 let hashChangeTimeout;
+
 // ページ表示後にハッシュフラグメントが変化したら検索
 window.addEventListener('hashchange', () => {
   clearTimeout(hashChangeTimeout);
