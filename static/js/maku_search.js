@@ -38,6 +38,7 @@ function isNewQueries(splittedInput) {
 let allEntries = [];
 // 各セクションごとの JSON を結合する
 [
+  entries_2004,
   entries_2005,
   entries_2006,
   entries_2007,
