@@ -111,6 +111,44 @@ function searchData(rawQuery) {
 }
 
 /**
+ * Hugo の日付文字列をパースして指定したフォーマットにする
+ * @param {Date} date 
+ * @returns String
+ */
+function formatDateString(date) {
+  const dt = new Date(date);
+  const year = dt.getFullYear();
+  const month = ('0' + (dt.getMonth() + 1)).slice(-2);
+  const postDate = ('0' + dt.getDate()).slice(-2);
+  const hour = ('0' + dt.getHours()).slice(-2);
+  const minute = ('0' + dt.getMinutes()).slice(-2);
+
+  return `${year}-${month}-${postDate} ${hour}:${minute}`;
+}
+
+/**
+ * すべてのエントリーから date が最新のものを得る
+ * @returns Object
+ */
+function getLatestEntry() {
+  const sorted = allEntries.sort((a, b) => {
+    return (a.date > b.date) ? -1 : 1;
+  });
+  return sorted[0];
+}
+
+/**
+ * 最新エントリーの日付とタイトルを並べる
+ * @returns String
+ */
+function createLatestHtml() {
+  const entry = getLatestEntry();
+  const date = formatDateString(entry.date);
+  return `<p>（最新： ${date} ${entry.title}）</p>`;
+}
+document.querySelector("#latest").innerHTML = createLatestHtml();
+
+/**
  * エントリの div タグを組み立てる
  * @param {String} url エントリの URL
  * @param {String} title エントリのタイトル
@@ -130,14 +168,7 @@ function createEntry(url, title, date, body, queries) {
   }
 
   function createDate(date) {
-    const dt = new Date(date);
-    const year = dt.getFullYear();
-    const month = ('0' + (dt.getMonth() + 1)).slice(-2);
-    const postDate = ('0' + dt.getDate()).slice(-2);
-    const hour = ('0' + dt.getHours()).slice(-2);
-    const minute = ('0' + dt.getMinutes()).slice(-2);
-
-    const dateString = `${year}-${month}-${postDate} ${hour}:${minute}`;
+    const dateString = formatDateString(date);
     return '<div class="item_date">' + dateString + '</div>';
   }
 
