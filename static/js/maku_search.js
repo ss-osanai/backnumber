@@ -111,35 +111,6 @@ function searchData(rawQuery) {
 }
 
 /**
- * タイトルの HTML を作成する
- * @param {String} url 
- * @param {String} title 
- * @returns {String}
- */
-function createTitle(url, title) {
-  return '<a class="item_title" href="' + url + '" target="_blank">' + title + '</a>';
-}
-
-/**
- * 抜粋部分の HTML を作る
- * @param {String} body 
- * @param {Array} queries 
- * @returns 
- */
-function createExcerpt(body, queries) {
-  const before = 50;
-  const after = 100;
-
-  return queries.map(q =>
-    '<div class="item_excerpt">'
-    + body.substring(q.posBegin - before, q.posBegin)
-    + `<b>${q.query}</b>`
-    + body.substring(q.posEnd, q.posEnd + after)
-    + '</div>'
-  ).join('');
-}
-
-/**
  * エントリの div タグを組み立てる
  * @param {String} url エントリの URL
  * @param {String} title エントリのタイトル
@@ -148,6 +119,35 @@ function createExcerpt(body, queries) {
  * @returns 
  */
 function createEntry(url, title, body, queries) {
+  /**
+   * タイトルの HTML を作成する
+   * @param {String} url 
+   * @param {String} title 
+   * @returns {String}
+   */
+  function createTitle(url, title) {
+    return '<a class="item_title" href="' + url + '" target="_blank">' + title + '</a>';
+  }
+
+  /**
+   * 抜粋部分の HTML を作る
+   * @param {String} body 
+   * @param {Array} queries 
+   * @returns 
+   */
+  function createExcerpt(body, queries) {
+    const before = 50;
+    const after = 100;
+
+    return queries.map(q =>
+      '<div class="item_excerpt">'
+      + body.substring(q.posBegin - before, q.posBegin)
+      + `<b>${q.query}</b>`
+      + body.substring(q.posEnd, q.posEnd + after)
+      + '</div>'
+    ).join('');
+  }
+
   return '<div class="item">' +
     createTitle(url, title) +
     createExcerpt(body, queries) +
