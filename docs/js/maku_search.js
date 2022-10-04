@@ -111,12 +111,69 @@ function searchData(rawQuery) {
 }
 
 /**
+ * エントリの div タグを組み立てる
+ * @param {String} url エントリの URL
+ * @param {String} title エントリのタイトル
+ * @param {String} body エントリの本文
+ * @param {Array} queries 検索ワードの配列
+ * @returns 
+ */
+function createEntry(url, title, date, body, queries) {
+  /**
+   * タイトルの HTML を作成する
+   * @param {String} url 
+   * @param {String} title 
+   * @returns {String}
+   */
+  function createTitle(url, title) {
+    return '<a class="item_title" href="' + url + '" target="_blank">' + title + '</a>';
+  }
+
+  function createDate(date) {
+    const dt = new Date(date);
+    const year = dt.getFullYear();
+    const month = ('0' + (dt.getMonth() + 1)).slice(-2);
+    const postDate = ('0' + dt.getDate()).slice(-2);
+    const hour = ('0' + dt.getHours()).slice(-2);
+    const minute = ('0' + dt.getMinutes()).slice(-2);
+
+    const dateString = `${year}-${month}-${postDate} ${hour}:${minute}`;
+    return '<div class="item_date">' + dateString + '</div>';
+  }
+
+  /**
+   * 抜粋部分の HTML を作る
+   * @param {String} body 
+   * @param {Array} queries 
+   * @returns 
+   */
+  function createExcerpt(body, queries) {
+    const before = 50;
+    const after = 100;
+
+    return queries.map(q =>
+      '<div class="item_excerpt">'
+      + body.substring(q.posBegin - before, q.posBegin)
+      + `<b>${q.query}</b>`
+      + body.substring(q.posEnd, q.posEnd + after)
+      + '</div>'
+    ).join('');
+  }
+
+  return '<div class="item">' +
+    createTitle(url, title) +
+    createDate(date) +
+    createExcerpt(body, queries) +
+    '</div>';
+}
+
+/**
  * 
  * @param {Array} result - [{entry: entry, queries: [{query1, posBegin, posEnd}, {query2, posBegin, posEnd}...]}, ...]
  * @returns 
  */
 function createHtml(result) {
-  const htmls = result.map(x => createEntry(x.entry.url, x.entry.title, x.entry.body, x.queries))
+  const htmls = result.map(x => createEntry(x.entry.url, x.entry.title, x.entry.date, x.entry.body, x.queries))
   return htmls.join('');
 }
 
@@ -136,51 +193,6 @@ function search(query) {
   showResult(html);
   showResultCount(result.length, allEntries.length);
 }
-
-/**
- * タイトルの HTML を作成する
- * @param {String} url 
- * @param {String} title 
- * @returns {String}
- */
-function createTitle(url, title) {
-  return '<a class="item_title" href="' + url + '" target="_blank">' + title + '</a>';
-}
-
-/**
- * 抜粋部分の HTML を作る
- * @param {String} body 
- * @param {Array} queries 
- * @returns 
- */
-function createExcerpt(body, queries) {
-  const before = 50;
-  const after = 100;
-
-  return queries.map(q =>
-    '<div class="item_excerpt">'
-    + body.substring(q.posBegin - before, q.posBegin)
-    + `<b>${q.query}</b>`
-    + body.substring(q.posEnd, q.posEnd + after)
-    + '</div>'
-  ).join('');
-}
-
-/**
- * エントリの div タグを組み立てる
- * @param {String} url エントリの URL
- * @param {String} title エントリのタイトル
- * @param {String} body エントリの本文
- * @param {Array} queries 検索ワードの配列
- * @returns 
- */
-function createEntry(url, title, body, queries) {
-  return '<div class="item">' +
-    createTitle(url, title) +
-    createExcerpt(body, queries) +
-    '</div>';
-}
-
 
 function clearResult() {
   var el = document.getElementById('result');
@@ -234,6 +246,7 @@ window.addEventListener('DOMContentLoaded', searchWithHash);
 
 const timeout = 500;
 let hashChangeTimeout;
+
 // ページ表示後にハッシュフラグメントが変化したら検索
 window.addEventListener('hashchange', () => {
   clearTimeout(hashChangeTimeout);
