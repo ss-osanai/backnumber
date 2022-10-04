@@ -118,7 +118,7 @@ function searchData(rawQuery) {
  * @param {Array} queries 検索ワードの配列
  * @returns 
  */
-function createEntry(url, title, body, queries) {
+function createEntry(url, title, date, body, queries) {
   /**
    * タイトルの HTML を作成する
    * @param {String} url 
@@ -127,6 +127,18 @@ function createEntry(url, title, body, queries) {
    */
   function createTitle(url, title) {
     return '<a class="item_title" href="' + url + '" target="_blank">' + title + '</a>';
+  }
+
+  function createDate(date) {
+    const dt = new Date(date);
+    const year = dt.getFullYear();
+    const month = ('0' + (dt.getMonth() + 1)).slice(-2);
+    const postDate = ('0' + dt.getDate()).slice(-2);
+    const hour = ('0' + dt.getHours()).slice(-2);
+    const minute = ('0' + dt.getMinutes()).slice(-2);
+
+    const dateString = `${year}-${month}-${postDate} ${hour}:${minute}`;
+    return '<div class="item_date">' + dateString + '</div>';
   }
 
   /**
@@ -150,6 +162,7 @@ function createEntry(url, title, body, queries) {
 
   return '<div class="item">' +
     createTitle(url, title) +
+    createDate(date) +
     createExcerpt(body, queries) +
     '</div>';
 }
@@ -160,7 +173,7 @@ function createEntry(url, title, body, queries) {
  * @returns 
  */
 function createHtml(result) {
-  const htmls = result.map(x => createEntry(x.entry.url, x.entry.title, x.entry.body, x.queries))
+  const htmls = result.map(x => createEntry(x.entry.url, x.entry.title, x.entry.date, x.entry.body, x.queries))
   return htmls.join('');
 }
 
