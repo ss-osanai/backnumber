@@ -1,6 +1,36 @@
 // キーワードのデリミタは半角スペースとする
 const delim = ' ';
 
+// 全てのエントリを入れる配列
+let allEntries = [];
+
+// 各セクションごとの JSON を結合する
+[
+  entries_2003,
+  entries_2004,
+  entries_2005,
+  entries_2006,
+  entries_2007,
+  entries_2008,
+  entries_2009,
+  entries_2010,
+  entries_2011,
+  entries_2012,
+  entries_2013,
+  entries_2014,
+  entries_2015,
+  entries_2016,
+  entries_2017,
+  entries_2018,
+  entries_2019,
+  entries_2020,
+  entries_2021,
+  entries_2022,
+].forEach(entries => {
+  allEntries = allEntries.concat(entries);
+  console.log(`allEntries length: ${allEntries.length}`);
+});
+
 /**
  * 検索クエリをデリミタで分割した配列を返す。
  * @param {String} input 
@@ -32,82 +62,6 @@ let oldInput = null;
  */
 function isNewQueries(splittedInput) {
   return (!oldInput || (splittedInput.join(delim) != oldInput.join(delim)));
-}
-
-// 全てのエントリを入れる配列
-let allEntries = [];
-// 各セクションごとの JSON を結合する
-[
-  entries_2003,
-  entries_2004,
-  entries_2005,
-  entries_2006,
-  entries_2007,
-  entries_2008,
-  entries_2009,
-  entries_2010,
-  entries_2011,
-  entries_2012,
-  entries_2013,
-  entries_2014,
-  entries_2015,
-  entries_2016,
-  entries_2017,
-  entries_2018,
-  entries_2019,
-  entries_2020,
-  entries_2021,
-  entries_2022,
-].forEach(entries => {
-  allEntries = allEntries.concat(entries);
-  console.log(`allEntries length: ${allEntries.length}`);
-});
-
-/**
- * 
- * @param {String} rawQuery 
- * @returns {Array} - [{entry: entry, queries: [{query1, posBegin, posEnd}, {query2, posBegin, posEnd}...]}, ...]
- */
-function searchData(rawQuery) {
-  let result = [];
-  const queries = splitInput(rawQuery);
-
-  if (isNewQueries(queries)) {
-    oldInput = queries;
-  }
-  const regexpList = queries.map(q => new RegExp(q, 'i'));
-
-  /* 全ての query にマッチするエントリの配列 */
-  const matchedEntries = allEntries.filter(entry =>
-    regexpList.every(re => re.test(entry.body))
-  );
-
-  /*
-    配列
-    entry: entry
-    queries: [{query, posBegin, posEnd}, ...]
-  */
-  result = matchedEntries.map(entry => {
-    const queries2 = [];
-
-    for (let i = 0; i < queries.length; i++) {
-      let pos = entry.body.search(regexpList[i]);
-      let end = pos + queries[i].length;
-
-      queries2.push({
-        query: queries[i],
-        posBegin: pos,
-        posEnd: end
-      });
-    }
-
-    return {
-      entry: entry,
-      queries: queries2
-    };
-  })
-  console.dir(result)
-  return result;
 }
 
 /**
@@ -144,7 +98,7 @@ function getLatestEntry() {
 function createLatestHtml() {
   const entry = getLatestEntry();
   const date = formatDateString(entry.date);
-  return `<p>（最新： ${date} ${entry.title}）</p>`;
+  return `（最新： ${date} ${entry.title}）`;
 }
 document.querySelector("#latest").innerHTML = createLatestHtml();
 
@@ -157,6 +111,12 @@ document.querySelector("#latest").innerHTML = createLatestHtml();
  * @returns 
  */
 function createEntry(url, title, date, body, queries) {
+  const queriesBody = queries.filter(query => query.kind === 'body');
+  const queriesTitle = queries.filter(query => query.kind === 'title');
+  const queriesDate = queries.filter(query => query.kind === 'date');
+
+  console.log(queriesTitle);
+  console.log(queriesDate);
   /**
    * タイトルの HTML を作成する
    * @param {String} url 
@@ -167,9 +127,29 @@ function createEntry(url, title, date, body, queries) {
     return '<a class="item_title" href="' + url + '" target="_blank">' + title + '</a>';
   }
 
+  function createTitle2(url, title, queries) {
+    if (queries.length === 0) {
+      return '<a class="item_title" href="' + url + '" target="_blank">' + title + '</a>';
+    }
+    // 複数箇所がヒットした場合にどうしたらよいか？
+    const fragments = title.split(queries[0].query);
+    const titleHtml = `${fragments[0]}<b>${queries[0].query}</b>${fragments[1]}`;
+    return '<a class="item_title" href="' + url + '" target="_blank">' + titleHtml + '</a>';
+  }
+
   function createDate(date) {
     const dateString = formatDateString(date);
     return '<div class="item_date">' + dateString + '</div>';
+  }
+
+  function createDate2(date, queries) {
+    const dateString = formatDateString(date);
+    if (queries.length === 0) {
+      return '<div class="item_date">' + dateString + '</div>';
+    }
+    // 複数箇所がヒットした場合にどうしたらよいか？
+    const fragments = dateString.split(queries[0].query);
+    return '<div class="item_date">' + fragments[0] + '<b>' + queries[0].query + '</b>' + fragments[1] + '</div>';
   }
 
   /**
@@ -192,10 +172,114 @@ function createEntry(url, title, date, body, queries) {
   }
 
   return '<div class="item">' +
-    createTitle(url, title) +
-    createDate(date) +
-    createExcerpt(body, queries) +
+    createTitle2(url, title, queriesTitle) +
+    createDate2(date, queriesDate) +
+    createExcerpt(body, queriesBody) +
     '</div>';
+}
+
+/**
+ * 
+ * @param {String} rawQuery 
+ * @returns {Array} - [{entry: entry, queries: [{query1, posBegin, posEnd}, {query2, posBegin, posEnd}...]}, ...]
+ */
+function searchData(rawQuery) {
+  const queries = splitInput(rawQuery);
+
+  if (isNewQueries(queries)) {
+    oldInput = queries;
+  }
+  const regexpList = queries.map(q => new RegExp(q, 'i'));
+
+  /* 全ての query にマッチするエントリの配列 */
+  const matchedEntries = allEntries.filter(entry =>
+    regexpList.every(re => re.test(entry.body))
+  );
+
+  /* 全ての query にマッチするエントリの配列 */
+  const matchedEntries_ = allEntries.filter(entry =>
+    regexpList.every(re => {
+      let dateString = formatDateString(entry.date);
+      return re.test(entry.body) || re.test(entry.title) || re.test(dateString);
+    })
+  );
+
+  const result2 = matchedEntries_.map(entry => {
+    const queries2 = [];
+
+    for (let i = 0; i < queries.length; i++) {
+      // body
+      if (regexpList[i].test(entry.body)) {
+        let pos = entry.body.search(regexpList[i]);
+        let end = pos + queries[i].length;
+
+        queries2.push({
+          kind: "body",
+          query: queries[i],
+          posBegin: pos,
+          posEnd: end
+        });
+      }
+      // title
+      if (regexpList[i].test(entry.title)) {
+        let pos = entry.title.search(regexpList[i]);
+        let end = pos + queries[i].length;
+
+        queries2.push({
+          kind: "title",
+          query: queries[i],
+          posBegin: pos,
+          posEnd: end
+        });
+      }
+      // date
+      let dateString = formatDateString(entry.date);
+      if (regexpList[i].test(dateString)) {
+        let pos = dateString.search(regexpList[i]);
+        let end = pos + queries[i].length;
+
+        queries2.push({
+          kind: "date",
+          query: queries[i],
+          posBegin: pos,
+          posEnd: end
+        });
+      }
+    }
+
+    return {
+      entry: entry,
+      queries: queries2
+    };
+  });
+
+  /*
+    配列
+    entry: entry
+    queries: [{query, posBegin, posEnd}, ...]
+  */
+  const result = matchedEntries.map(entry => {
+    const queries2 = [];
+
+    for (let i = 0; i < queries.length; i++) {
+      let pos = entry.body.search(regexpList[i]);
+      let end = pos + queries[i].length;
+
+      queries2.push({
+        query: queries[i],
+        posBegin: pos,
+        posEnd: end
+      });
+    }
+
+    return {
+      entry: entry,
+      queries: queries2
+    };
+  })
+  console.dir(result)
+  // return result;
+  return result2;
 }
 
 /**
@@ -204,7 +288,9 @@ function createEntry(url, title, date, body, queries) {
  * @returns 
  */
 function createHtml(result) {
-  const htmls = result.map(x => createEntry(x.entry.url, x.entry.title, x.entry.date, x.entry.body, x.queries))
+  const htmls = result.map(x =>
+    createEntry(x.entry.url, x.entry.title, x.entry.date, x.entry.body, x.queries)
+  )
   return htmls.join('');
 }
 
