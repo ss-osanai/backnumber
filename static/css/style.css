@@ -43,3 +43,28 @@ code {
   -webkit-font-smoothings: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* 前ページ、次ページへのリンク */
+.xPrevNextLink::after {
+  /* float による回り込みの解除 */
+  display: block;
+  content: "";
+  clear: both;
+}
+.xPrevNextLink_prev {
+  display: block;
+  float: left;
+  margin-top: 20px;
+}
+.xPrevNextLink_prev::before {
+  content: "≪ 前の号";
+}
+.xPrevNextLink_next {
+  display: block;
+  float: right;
+  text-align: right;
+  margin-top: 20px;
+}
+.xPrevNextLink_next::after {
+  content: "次の号 ≫";
+}

@@ -8,6 +8,8 @@
   <span class="b"> / </span>
   <a href="/raw" class="b bb bw1 pb1 no-underline black">raw</a>
 
+  {{ partial "prev-next" . }}
+
   <section id="main" class="mt5">
     <h1 itemprop="name" id="title">{{ .Title }}</h1>
     <span class="f6 gray">{{ .Date.Format "2006/01/02 15:04" }}</span>
@@ -51,6 +53,8 @@
     {{ end }}
 
   </section>
+
+  {{ partial "prev-next" . }}
 
   {{ partial "footer.html" . }}
 </body>
