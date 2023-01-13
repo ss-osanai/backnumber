@@ -45,6 +45,10 @@ code {
 }
 
 /* 前ページ、次ページへのリンク */
+.xPrevNextLink {
+  margin-top: 20px;
+}
+
 .xPrevNextLink::after {
   /* float による回り込みの解除 */
   display: block;
