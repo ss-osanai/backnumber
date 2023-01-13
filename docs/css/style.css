@@ -45,6 +45,10 @@ code {
 }
 
 /* 前ページ、次ページへのリンク */
+.xPrevNextLink {
+  margin-top: 20px;
+}
+
 .xPrevNextLink::after {
   /* float による回り込みの解除 */
   display: block;
@@ -54,16 +58,17 @@ code {
 .xPrevNextLink_prev {
   display: block;
   float: left;
+  margin-top: 20px;
 }
 .xPrevNextLink_prev::before {
-  content: "≪";
+  content: "≪ 前の号";
 }
 .xPrevNextLink_next {
   display: block;
   float: right;
   text-align: right;
-
+  margin-top: 20px;
 }
 .xPrevNextLink_next::after {
-  content: "≫";
+  content: "次の号 ≫";
 }
