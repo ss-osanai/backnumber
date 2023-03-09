@@ -44,6 +44,10 @@ code {
   -moz-osx-font-smoothing: grayscale;
 }
 
+section#main.mt5 {
+  margin-top: 30px;
+}
+
 /* 前ページ、次ページへのリンク */
 .xPrevNextLink {
   margin-top: 20px;
@@ -55,20 +59,27 @@ code {
   content: "";
   clear: both;
 }
+
 .xPrevNextLink_prev {
   display: block;
   float: left;
-  margin-top: 20px;
+  /* text-align: left; */
+  margin-top: 10px;
+  margin-left: 0px;
 }
+
 .xPrevNextLink_prev::before {
   content: "≪ 前の号";
+  margin-right: 5px;
 }
+
 .xPrevNextLink_next {
   display: block;
   float: right;
   text-align: right;
-  margin-top: 20px;
+  margin-top: 10px;
 }
+
 .xPrevNextLink_next::after {
   content: "次の号 ≫";
 }
