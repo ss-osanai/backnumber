@@ -26,7 +26,8 @@ let allEntries = [];
   entries_2020,
   entries_2021,
   entries_2022,
-  entries_2023
+  entries_2023,
+  entries_2024,
 ].forEach(entries => {
   allEntries = allEntries.concat(entries);
   console.log(`allEntries length: ${allEntries.length}`);
@@ -172,11 +173,11 @@ function createEntry(url, title, date, body, queries) {
     ).join('');
   }
 
-  return '<div class="item">' +
-    createTitle2(url, title, queriesTitle) +
-    createDate2(date, queriesDate) +
-    createExcerpt(body, queriesBody) +
-    '</div>';
+  return '<div class="item">'
+    + createTitle2(url, title, queriesTitle)
+    + createDate2(date, queriesDate)
+    + createExcerpt(body, queriesBody)
+    + '</div>';
 }
 
 /**
