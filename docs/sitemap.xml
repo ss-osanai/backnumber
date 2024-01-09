@@ -2,38 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://ss-osanai.github.io/backnumber/raw/2023/</loc>
+    <loc>https://ss-osanai.github.io/backnumber/raw/2024/</loc>
     <lastmod>2024-01-09T07:50:07+09:00</lastmod>
   </url><url>
     <loc>https://ss-osanai.github.io/backnumber/raw/</loc>
     <lastmod>2024-01-09T07:50:07+09:00</lastmod>
   </url><url>
-    <loc>https://ss-osanai.github.io/backnumber/raw/2023/01/240109_0750/</loc>
+    <loc>https://ss-osanai.github.io/backnumber/raw/2024/01/240109_0750/</loc>
     <lastmod>2024-01-09T07:50:07+09:00</lastmod>
   </url><url>
     <loc>https://ss-osanai.github.io/backnumber/</loc>
     <lastmod>2024-01-09T07:50:07+09:00</lastmod>
   </url><url>
-    <loc>https://ss-osanai.github.io/backnumber/raw/2023/01/240108_0718/</loc>
+    <loc>https://ss-osanai.github.io/backnumber/raw/2024/01/240108_0718/</loc>
     <lastmod>2024-01-08T07:18:56+09:00</lastmod>
   </url><url>
-    <loc>https://ss-osanai.github.io/backnumber/raw/2023/01/240107_0820/</loc>
+    <loc>https://ss-osanai.github.io/backnumber/raw/2024/01/240107_0820/</loc>
     <lastmod>2024-01-07T08:20:11+09:00</lastmod>
   </url><url>
-    <loc>https://ss-osanai.github.io/backnumber/raw/2023/01/240106_0550/</loc>
+    <loc>https://ss-osanai.github.io/backnumber/raw/2024/01/240106_0550/</loc>
     <lastmod>2024-01-06T05:50:00+09:00</lastmod>
   </url><url>
-    <loc>https://ss-osanai.github.io/backnumber/raw/2023/01/240105_0336/</loc>
+    <loc>https://ss-osanai.github.io/backnumber/raw/2024/01/240105_0336/</loc>
     <lastmod>2024-01-05T03:36:39+09:00</lastmod>
   </url><url>
-    <loc>https://ss-osanai.github.io/backnumber/raw/2023/01/240103_1930/</loc>
+    <loc>https://ss-osanai.github.io/backnumber/raw/2024/01/240103_1930/</loc>
     <lastmod>2024-01-03T19:30:00+09:00</lastmod>
   </url><url>
-    <loc>https://ss-osanai.github.io/backnumber/raw/2023/01/240102_1930/</loc>
+    <loc>https://ss-osanai.github.io/backnumber/raw/2024/01/240102_1930/</loc>
     <lastmod>2024-01-02T19:30:00+09:00</lastmod>
   </url><url>
-    <loc>https://ss-osanai.github.io/backnumber/raw/2023/01/240101_0500/</loc>
+    <loc>https://ss-osanai.github.io/backnumber/raw/2024/01/240101_0500/</loc>
     <lastmod>2024-01-01T05:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://ss-osanai.github.io/backnumber/raw/2023/</loc>
+    <lastmod>2023-12-31T18:19:06+09:00</lastmod>
   </url><url>
     <loc>https://ss-osanai.github.io/backnumber/raw/2023/12/231231_1819/</loc>
     <lastmod>2023-12-31T18:19:06+09:00</lastmod>
@@ -28195,6 +28198,8 @@
     <loc>https://ss-osanai.github.io/backnumber/search/2022.js</loc>
   </url><url>
     <loc>https://ss-osanai.github.io/backnumber/search/2023.js</loc>
+  </url><url>
+    <loc>https://ss-osanai.github.io/backnumber/search/2024.js</loc>
   </url><url>
     <loc>https://ss-osanai.github.io/backnumber/categories/</loc>
   </url><url>
