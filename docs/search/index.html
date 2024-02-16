@@ -43,15 +43,21 @@
   </style>
 </head>
 
-<body>
+<body class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns">
+
+  <span class="b"> | </span>
+  <a href="https://ss-osanai.github.io/backnumber/raw" class="b bb bw1 pb1 no-underline black">一覧</a>
+
 
   <h1>Search</h1>
   <p>半角スペース区切りで複数ワード検索ができます。（例： 抽象度 理解）</p>
   <div id="latest"></div>
+
   <input id="query" onkeyup="location.replace('#' + this.value)" size="20" autocomplete="off" autofocus
     placeholder="検索ワード" />
   <span id="inputWord"></span>
   <span id="resultCount"></span>
+
   <div id="result"></div>
 
   <script src="2003.js"></script>
