@@ -1,5 +1,12 @@
 var entries_2024 = [
 {
+url: "https://ss-osanai.github.io/backnumber/raw/2024/02/240216_0421/",
+title: "【進化論】オラついた、上から目線の命令口調だが愛はある、そんな新バージョンの鮒谷をご覧ください",
+date: "2024-02-16T04:21:37+09:00",
+body: "【進化論】オラついた、上から目線の命令口調だが愛はある、そんな新バージョンの鮒谷をご覧ください bh=FZcR5NsJJvTeRo3A7x8Ptg8EFEEGfDl79g5yvL19GdY=;\rb=dbQk4V41a1Zvg0SKAiogZ6ks5lGLCL/EiqcM5jDT01uekXnDIPwnIpfE9wDkeqnQ\rFKxi401h/QFdLfKKH6QMqeI8SkSXpJXVl85c2lakpY/d4R7NpGjAOjufNmVUXW56dXZ\rKqicFtksG6uGVFFIkfJHoc+IlM8SX2ju0d0Fbkw8=\rDate: Fri, 16 Feb 2024 04:21:37 +0900 (JST)\rFrom: =?ISO-2022-JP?B?GyRCIVpKK0MrGyhCIBskQjx+O0shSko/QC4/SjI9T0AhSyFbGyhCIA==?= =?ISO-2022-JP?B?bWFnMiAwMDAwMTE0OTQ4?= \u0026lt;mailmag@mag2letter.com\u0026gt;\rReply-To: 0000114948_zgrusk@publisher.mag2.com\rTo: osanai@2nd-stage.jp\rMessage-ID: \u0026lt;741825529.706270.1708025966467.tandem@magtds202\u0026gt;\rSubject: =?ISO-2022-JP?B?GyRCIVo/SjI9T0AhWyUqJWkkRCQkJD8hIhsoQg==?=\r=?ISO-2022-JP?B?GyRCPmUkKyRpTFxAfiROTD9OYTh9RDQkQCQsGyhC?=\r=?ISO-2022-JP?B?GyRCMCYkTyQiJGshIiQ9JHMkSj83JVAhPCU4GyhC?=\r=?ISO-2022-JP?B?GyRCJWclcyROSitDKyRyJDRNdyQvJEAkNSQkGyhC?=\rMIME-Version: 1.0\rContent-Type: text/plain; charset=ISO-2022-JP"
+},
+
+{
 url: "https://ss-osanai.github.io/backnumber/raw/2024/02/240215_0710/",
 title: "【進化論】考え過ぎたら逆上がりできなくなる",
 date: "2024-02-15T07:10:05+09:00",
