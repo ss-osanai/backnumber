@@ -10,6 +10,8 @@
 
   {{ partial "prev-next" . }}
 
+  {{ partial "font-controller" . }}
+
   <section id="main" class="mt5">
     <h1 itemprop="name" id="title">{{ .Title }}</h1>
     <span class="f6 gray">{{ .Date.Format "2006/01/02 15:04" }}</span>
