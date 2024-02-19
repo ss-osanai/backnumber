@@ -20,6 +20,23 @@
     <!-- 他のフォントウェイトのオプションも追加可能 -->
   </select>
 
+  <br>
+
+  <label for="fontFamilySelect">フォントファミリー:</label>
+  <select id="fontFamilySelect">
+    <option value="'MS Gothic', sans-serif">'MS Gothic', sans-serif</option>
+    <option value="'MS Gothic', monospace">'MS Gothic', monospace</option>
+
+    <option value="'Noto Sans JP', sans-serif">'Noto Sans JP', sans-serif</option>
+    <option value="'Noto Sans JP', monospace">'Noto Sans JP', monospace</option>
+
+    <option value="'M PLUS 1 Code', sans-serif">'M PLUS 1 Code', sans-serif</option>
+    <option value="'M PLUS 1 Code', monospace">'M PLUS 1 Code', monospace</option>
+
+    <option value="'UDEV Gothic JPDOC', sans-serif">'UDEV Gothic JPDOC', sans-serif</option>
+    <option value="'UDEV Gothic JPDOC', monospace">'UDEV Gothic JPDOC', monospace</option>
+  </select>
+
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const content = document.querySelector('#content pre code');
@@ -49,6 +66,13 @@
       fontWeightSelect.addEventListener('change', function () {
         content.style.fontWeight = this.value;
       });
+
+      // フォントファミリーの変更
+      const fontFamilySelect = document.getElementById('fontFamilySelect');
+      fontFamilySelect.addEventListener('change', function () {
+        content.style.fontFamily = this.value;
+      });
+
     });
   </script>
 
