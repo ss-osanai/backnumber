@@ -71,6 +71,81 @@
   
 </div>
 
+  <br>
+<div id="font-controller">
+  <label for="fontSizeInput">フォントサイズ:</label>
+  <input type="number" id="fontSizeInput" value="15.0" min="1.0" style="width: 80px;" />
+  <button id="increaseFontSize">+</button>
+  <button id="decreaseFontSize">-</button>
+
+  <br>
+
+  <label for="fontWeightSelect">フォントウェイト:</label>
+  <select id="fontWeightSelect">
+    <option value="normal">Normal</option>
+    <option value="bold">Bold</option>
+    
+    
+  </select>
+
+  <br>
+
+  <label for="fontFamilySelect">フォントファミリー:</label>
+  <select id="fontFamilySelect">
+    <option value="'MS Gothic', sans-serif">'MS Gothic', sans-serif</option>
+    <option value="'MS Gothic', monospace">'MS Gothic', monospace</option>
+
+    <option value="'Noto Sans JP', sans-serif">'Noto Sans JP', sans-serif</option>
+    <option value="'Noto Sans JP', monospace">'Noto Sans JP', monospace</option>
+
+    <option value="'M PLUS 1 Code', sans-serif">'M PLUS 1 Code', sans-serif</option>
+    <option value="'M PLUS 1 Code', monospace">'M PLUS 1 Code', monospace</option>
+
+    <option value="'UDEV Gothic JPDOC', sans-serif">'UDEV Gothic JPDOC', sans-serif</option>
+    <option value="'UDEV Gothic JPDOC', monospace">'UDEV Gothic JPDOC', monospace</option>
+  </select>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const content = document.querySelector('#content pre code');
+      const fontSizeInput = document.getElementById('fontSizeInput');
+      const increaseFontSize = document.getElementById('increaseFontSize');
+      const decreaseFontSize = document.getElementById('decreaseFontSize');
+      const fontWeightSelect = document.getElementById('fontWeightSelect');
+
+      
+      increaseFontSize.addEventListener('click', function () {
+        fontSizeInput.value = parseFloat(fontSizeInput.value) + 1.0;
+        updateFontSize();
+      });
+
+      decreaseFontSize.addEventListener('click', function () {
+        fontSizeInput.value = parseFloat(fontSizeInput.value) - 1.0;
+        updateFontSize();
+      });
+
+      fontSizeInput.addEventListener('change', updateFontSize);
+
+      function updateFontSize() {
+        content.style.fontSize = fontSizeInput.value + 'px';
+      }
+
+      
+      fontWeightSelect.addEventListener('change', function () {
+        content.style.fontWeight = this.value;
+      });
+
+      
+      const fontFamilySelect = document.getElementById('fontFamilySelect');
+      fontFamilySelect.addEventListener('change', function () {
+        content.style.fontFamily = this.value;
+      });
+
+    });
+  </script>
+
+</div>
+
   <section id="main" class="mt5">
     <h1 itemprop="name" id="title">【最後の案内・あと３時間】「必勝フォーマット」づくりから始まる事業の垂直立ち上げ</h1>
     <span class="f6 gray">2017/12/16 19:00</span>
