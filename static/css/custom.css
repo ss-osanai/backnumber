@@ -2,10 +2,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap');
 
+@import url('../fonts/UDEVGothicJPDOC-Regular.ttf');
+@import url('../fonts/UDEVGothicJPDOC-Bold.ttf');
+@import url('../fonts/UDEVGothicJPDOC-Italic.ttf');
+@import url('../fonts/UDEVGothicJPDOC-BoldItalic.ttf');
+
 code {
   /* font-family: 'Noto Sans JP', "MS Gothic", sans-serif; */
   /* font-family: 'BIZ UDGothic', sans-serif; */
   /* font-family: "メイリオ", sans-serif; */
   /* font-family: "M PLUS 1 Code", monospace; */
   font-family: "MS Gothic", sans-serif;
+  /* font-family: "MS Gothic", monospace; */
+  /* font-family: "UDEV Gothic JPDOC", sans-serif; */
 }
