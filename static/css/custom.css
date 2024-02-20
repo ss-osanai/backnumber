@@ -8,8 +8,9 @@
 @import url('../fonts/UDEVGothicJPDOC-BoldItalic.ttf');
 
 code {
-  font-family: "UDEV Gothic JPDOC", sans-serif;
+  font-size: 15px;
   font-weight: bold;
+  font-family: "UDEV Gothic JPDOC", sans-serif;
 }
 
 /* raw の list.html で タイトルのフォントサイズを変更する */
