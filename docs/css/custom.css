@@ -8,11 +8,11 @@
 @import url('../fonts/UDEVGothicJPDOC-BoldItalic.ttf');
 
 code {
-  /* font-family: 'Noto Sans JP', "MS Gothic", sans-serif; */
-  /* font-family: 'BIZ UDGothic', sans-serif; */
-  /* font-family: "メイリオ", sans-serif; */
-  /* font-family: "M PLUS 1 Code", monospace; */
-  font-family: "MS Gothic", sans-serif;
-  /* font-family: "MS Gothic", monospace; */
-  /* font-family: "UDEV Gothic JPDOC", sans-serif; */
+  font-family: "UDEV Gothic JPDOC", sans-serif;
+  font-weight: bold;
+}
+
+/* raw の list.html で タイトルのフォントサイズを変更する */
+#main #list li a {
+  font-size: 22px;
 }

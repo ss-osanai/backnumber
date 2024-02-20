@@ -78,19 +78,19 @@
 
   <label for="fontWeightSelect">フォントウェイト:</label>
   <select id="fontWeightSelect">
-    <option value="normal">Normal</option>
     <option value="bold">Bold</option>
+    <option value="normal">Normal</option>
   </select>
 
   <br>
 
   <label for="fontFamilySelect">フォントファミリー:</label>
   <select id="fontFamilySelect">
+    <option value="'UDEV Gothic JPDOC', sans-serif">5: 'UDEV Gothic JPDOC', sans-serif</option>
     <option value="'MS Gothic', sans-serif">1: 'MS Gothic', sans-serif</option>
     <option value="'Noto Sans JP', sans-serif">2: 'Noto Sans JP', sans-serif</option>
     <option value="'M PLUS 1 Code', sans-serif">3: 'M PLUS 1 Code', sans-serif</option>
     <option value="'M PLUS 1 Code', monospace">4: 'M PLUS 1 Code', monospace</option>
-    <option value="'UDEV Gothic JPDOC', sans-serif">5: 'UDEV Gothic JPDOC', sans-serif</option>
   </select>
 
   <script>
@@ -102,6 +102,10 @@
       const fontWeightSelect = document.getElementById('fontWeightSelect');
 
       
+      function updateFontSize() {
+        content.style.fontSize = fontSizeInput.value + 'px';
+      }
+
       increaseFontSize.addEventListener('click', function () {
         fontSizeInput.value = parseFloat(fontSizeInput.value) + 1.0;
         updateFontSize();
@@ -113,10 +117,6 @@
       });
 
       fontSizeInput.addEventListener('change', updateFontSize);
-
-      function updateFontSize() {
-        content.style.fontSize = fontSizeInput.value + 'px';
-      }
 
       
       fontWeightSelect.addEventListener('change', function () {
