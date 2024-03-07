@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html class="" lang="ja-jp" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+
+<head>
+  <meta charset="utf-8" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="【進化論】周りの歯車まで、ぶっ壊してしまう歯車" />
+<meta property="og:site_name" content="バックナンバー" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://ss-osanai.github.io/backnumber/raw/2024/03/240307_0853/" />
+<meta property="og:locale" content="ja-jp" />
+<meta property="article:published_time" content="2024-03-07
+" /> <meta property="article:modified_time" content="2024-03-07
+" />
+
+
+
+
+
+
+  <title>【進化論】周りの歯車まで、ぶっ壊してしまう歯車</title>
+  <link rel="canonical" href="https://ss-osanai.github.io/backnumber/raw/2024/03/240307_0853/" />
+  
+  
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css" />
+
+<link rel="stylesheet" href="https://ss-osanai.github.io/backnumber/css/style.css" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css" />
+
+<link rel="stylesheet" href="https://ss-osanai.github.io/backnumber/css/print.css" media="print" />
+<link rel="stylesheet" href="https://ss-osanai.github.io/backnumber/css/custom.css" />
+
+  <link rel="shortcut icon" href="https://ss-osanai.github.io/backnumber/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="https://ss-osanai.github.io/backnumber/apple-touch-icon.png" />
+</head>
+
+<body lang="ja-jp" class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns" itemscope
+  itemtype="http://schema.org/Article">
+
+  <a href="https://ss-osanai.github.io/backnumber/raw" class="b bb bw1 pb1 no-underline black">一覧</a>
+
+  <span class="b"> | </span>
+  <a href="https://ss-osanai.github.io/backnumber/search" class="b bb bw1 pb1 no-underline black">search</a>
+
+  <div class="xPrevNextLink">
+  
+  <div class="xPrevNextLink_prev">
+    <a href="https://ss-osanai.github.io/backnumber/raw/2024/03/240306_0622/">【進化論】1・2・3・ダァーッ！の法則</a>
+  </div>
+  
+  
+</div>
+
+  <br>
+<div id="font-controller">
+  <label for="fontSizeInput">フォントサイズ:</label>
+  <input type="number" id="fontSizeInput" value="15.0" min="1.0" style="width: 80px;" />
+  <button id="increaseFontSize">+</button>
+  <button id="decreaseFontSize">-</button>
+
+  <br>
+
+  <label for="fontWeightSelect">フォントウェイト:</label>
+  <select id="fontWeightSelect">
+    <option value="bold">Bold</option>
+    <option value="normal">Normal</option>
+  </select>
+
+  <br>
+
+  <label for="fontFamilySelect">フォントファミリー:</label>
+  <select id="fontFamilySelect">
+    <option value="'UDEV Gothic JPDOC', sans-serif">5: 'UDEV Gothic JPDOC', sans-serif</option>
+    <option value="'MS Gothic', sans-serif">1: 'MS Gothic', sans-serif</option>
+    <option value="'Noto Sans JP', sans-serif">2: 'Noto Sans JP', sans-serif</option>
+    <option value="'M PLUS 1 Code', sans-serif">3: 'M PLUS 1 Code', sans-serif</option>
+    <option value="'M PLUS 1 Code', monospace">4: 'M PLUS 1 Code', monospace</option>
+  </select>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const content = document.querySelector('#content pre code');
+      const fontSizeInput = document.getElementById('fontSizeInput');
+      const increaseFontSize = document.getElementById('increaseFontSize');
+      const decreaseFontSize = document.getElementById('decreaseFontSize');
+      const fontWeightSelect = document.getElementById('fontWeightSelect');
+
+      
+      function updateFontSize() {
+        content.style.fontSize = fontSizeInput.value + 'px';
+      }
+
+      increaseFontSize.addEventListener('click', function () {
+        fontSizeInput.value = parseFloat(fontSizeInput.value) + 1.0;
+        updateFontSize();
+      });
+
+      decreaseFontSize.addEventListener('click', function () {
+        fontSizeInput.value = parseFloat(fontSizeInput.value) - 1.0;
+        updateFontSize();
+      });
+
+      fontSizeInput.addEventListener('change', updateFontSize);
+
+      
+      fontWeightSelect.addEventListener('change', function () {
+        content.style.fontWeight = this.value;
+      });
+
+      
+      const fontFamilySelect = document.getElementById('fontFamilySelect');
+      fontFamilySelect.addEventListener('change', function () {
+        content.style.fontFamily = this.value;
+      });
+
+    });
+  </script>
+
+</div>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">【進化論】周りの歯車まで、ぶっ壊してしまう歯車</h1>
+    <span class="f6 gray">2024/03/07 08:53</span>
+
+    <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+      <pre tabindex="0"><code>■まぐまぐ大賞受賞
+　＆殿堂入りメルマガを友人に紹介するにはこちらを
+⇒ https://www.mag2.com/m/0000114948
+━━━━━━━━━━━━━━━━━━━
+令和6年3月6日 平成進化論 7494号
+
+■周りの歯車まで、ぶっ壊してしまう歯車
+
+　有限会社セカンドステージ代表取締役
+　京都大学大学院在籍
+
+　　　　　鮒谷周史（ふなたにしゅうじ）
+
+━━━━━━━━━━━━━━━━━━━
+
+＜鮒谷の活動ダイジェスト＞
+
+■引き続き、X(Twitter）に全集中
+
+───────────────────
+
+
+■おはようございます、鮒谷です。
+
+　引き続き、X(Twitter）に
+　集中しています。
+
+
+
+■X(Twitter）されている方は
+　アカウントにログイン後、
+
+　＜鮒谷のアカウント＞
+　https://twitter.com/shinkaron
+
+　をフォローいただければ、そちらから
+　抜け漏れなく、読めるようになります。
+
+　　
+━━━━━━━━━━━━━━━━━━━
+＜今日のピークパフォーマンス方程式＞
+
+■周りの歯車まで、ぶっ壊してしまう歯車
+
+───────────────────
+
+
+■二日前のメルマガにも書きましたが
+　先日、
+
+　「注意欠如・多動症（ADHD）」
+
+　の診断を受けました。
+
+
+
+■この機会に、改めてADHDについて
+　あれこれ調べてみたのですが、
+
+　国立精神・神経医療研究センターのHPには
+　以下のように説明されていました。
+
+
+　----------------
+
+　注意欠如・多動症（ADHD）とは、
+
+　発達水準からみて不相応に注意を
+　持続させることが困難であったり、
+
+　順序立てて行動することが
+　苦手であったり、
+
+　落ち着きがない、待てない、行動の抑制が
+　困難であるなどといった特徴が持続的に認められ、
+
+　そのために日常生活に
+　困難が起こっている状態です。
+
+
+　12歳以前から
+　これらの行動特徴があり、
+
+　学校、家庭、職場などの複数の場面で
+　困難がみられる場合に診断されます。
+
+　----------------
+
+
+
+■別のところ（武田薬品のHP)では
+
+
+　「ADHDは、
+
+　　不注意、多動性・衝動性が
+　　社会的、学業的、職業的活動に
+　　悪影響を及ぼす場合に、
+
+　　一定の基準をもって診断されます」
+
+
+　との文言もありました。　
+
+
+
+■過去のメルマガを
+　読んでくださったり、
+
+　いくつかの音源を聴いて
+　くださってきた方はお分かりの通り、
+
+　まんま、昔（小学生当時）から
+　今に至るまでの私なんですよね、、
+
+　完全にこれでした。
+　ありがとうございます。
+
+
+
+■学校とか会社といった、
+
+　秩序を求められる組織に
+　驚くほど適応できず、
+
+　どういうわけか自己認識と同等の成果を
+　出せなかったわけですが、
+
+　どうやら原因は
+　このあたりにあったようです。
+
+
+
+■こんな状態のまま
+　組織に合わせようと頑張っても
+
+　「無理なものは無理」
+
+　なんですよね。特質ですから。
+
+
+　持って生まれた性質に
+　変更を加えようと思っても、
+
+　できないものはできないのだから、
+
+　（性質変更ではない）別のプランを
+　検討する必要があったのでしょう。
+
+
+
+■「必要は発明の母」という言葉が
+　ありますが、
+　
+　たまたま私（鮒谷）は
+　ほとんど無意識にではありましたが、
+　
+　サラリーマン中期（？）くらいから
+　別プランを真剣に模索し始めました。
+
+
+
+■具体的には、
+
+　組織から離れ、
+　作業系の業務からも遠ざかり、
+
+　（＝不注意が生じる可能性を
+　　　できるだけ減じられるようにしつつ）
+　
+
+　一方で、
+
+　多動性・衝動性がかえって
+　活きてくるような仕事をすれば、
+
+　むしろそこから価値が生まれる、
+　なんてこともあるのではないかと、
+
+
+
+■組織に適合するとは、
+
+　誤解を恐れず、
+　かつ言葉を選ばずに言えば
+
+　「巨大なシステムの歯車になる」
+
+　のと同じであり、
+　その秩序をぶち壊すような人間は、
+
+　組織も置いておきたくないわけですよ。
+
+　
+
+■当該の歯車がぶっ壊れるだけなら
+　まだしも、
+
+　迷惑をかけたり、
+　ムダな時間を新たに作り出したりして、
+
+　下手をすれば、周りの歯車まで
+　ぶっ壊す可能性まであるわけですから。
+
+
+
+■なので、
+
+　改めて考えてみてもADHD系の人で
+　組織から離れられる人は、
+
+　経営者になる、
+　一択ではないか、
+
+　なんてことを思ったりも。
+
+　（あくまで個人の感想です）
+
+
+
+■ちなみに発達障害検査の中に
+　知能指数検査も含まれており、
+
+　そこで自身の知能指数を知りましたが、
+
+　とくにVIC（言語理解）において
+　突出して高い数値が出ました。
+
+
+
+■結果としては、
+　
+　「鍵穴（社会や環境）に鍵（自分）を
+　　合わせるための生存戦略」
+
+　として
+
+　----------------
+
+　落ち着きがないから、
+　いろんな場所に越境し、あれこれ挑戦し、
+
+　その経験を言語化し、さらには
+　ビジネス化まで持っていき、
+　
+
+　弱みであるところの作業は一切、自分で
+　行わずに強みを持つ人にやってもらう
+　　
+　----------------
+
+　というシステムを作り出しました。
+
+
+
+■これはあくまで私（鮒谷）の例なので
+　万人に適用できるとは限りませんが、
+
+　ただ、
+
+　【自己分析を重ねて、
+　　自身に最適化された環境を作り上げる】
+
+　という考え方や生存のための
+　アプローチとして、
+
+　参考にしていただけるところが
+　あるのではないかと思うんですよね。
+
+
+
+■いろんな方から
+
+　「ADHDは個性だ」
+
+　と言われましたが、
+　本当にそうですね。
+
+
+　
+■そもそもADHDでなければ
+　今のような仕事に至っていなかったのは、
+
+　まず、間違いのないことで
+　あったはず。
+
+
+　というよりも、
+
+　むしろその特性を、
+　ある意味においては
+
+　「代替が難しい（参入障壁となる）
+　　価値ある資質」
+　
+　に転換させられたとも
+　言えそうです。
+
+
+
+■昔から、それがどんな世界か
+　いまだ分からないけれども、
+
+　「まだ見ぬ、ここではない、
+　　自分に最適化された世界」
+
+　を作り上げようと願ってきたことは
+　間違いなく、
+　
+
+　その思いが無数の
+　トライアル＆エラーを促して、
+　
+　結果、今いる場所に連れて行って
+　くれたのであろうと考えています。
+
+
+
+■今日はたまたま、
+
+　私（鮒谷）のADHD診断を通して
+　考えたことについて記してきましたが、
+
+　抽象度を挙げれば、どんな人にも
+　適用できる話ではないでしょうか。
+
+
+
+■たまたま正式な病名というのか、
+　診断名がついているか否かの違いだけで、
+
+　少なからぬ人が、いろんな特質、特性で
+　苦しんでいると思うんですよね。
+
+
+　
+■それを「仕方ない」と諦めるのか、
+　あるいは、
+
+　「特徴的な個性として捉え、
+　　むしろ参入障壁となるような
+　　システムにまで昇華させられないか」
+
+　くらいまで考えて、
+　日々を生きるのか。
+
+　この違いが長い目で見ると、大きな差に
+　つながっていくのかもしれません。
+
+
+
+■なにはともあれ、
+
+　もし私（鮒谷）が会社づとめのまま、
+　我慢して環境を変えることがなければ
+
+　（たとえば転職とかしてみたところで
+　　本質的には同じ環境）
+
+　今に至るまで、ずーっと地獄のような
+　毎日が続いていたのだろうな、
+
+　と考えると、
+
+
+　あらためて、
+　
+　とても危うい綱渡りをしていた、
+　なんとかそこから逃れられてよかった、
+
+　と心から思えます。
+
+
+　
+■これからもさらに、
+
+　自分の特質、特性にマッチし、
+　かつ誰も入ってこられない特異な場所、
+
+　を探すための冒険に
+　出かけるつもりです。
+
+
+
+■そして特に、
+　メルマガをお読みくださっている
+
+　「ご同輩」
+
+　の方がいらっしゃるようであれば、
+
+　この一見、難儀な特性を
+　武器に変え、
+
+　お互いに頑張ってまいりましょう！
+　
+
+
+■引き続き、
+　X(Twitter）投稿を重ねていきますが、
+
+　「各投稿についての、24時間後の
+　　平均インプレッション数10,000達成」
+
+　の目標達成まで、あと55日！
+
+　＜鮒谷Twitter＞
+　https://twitter.com/shinkaron
+
+
+
+■今日も人生とビジネスを
+　楽しみましょう！
+
+　-----------
+
+　まぐまぐ大賞受賞＆殿堂入りの
+　当メルマガを友人に紹介するにはこちらから
+
+⇒ https://www.mag2.com/m/0000114948
+
+　-----------
+
+┏━━━━━━━━━━━━━━━━━━━━━┓
+┃　　　　　　　　　　　　　　　　　　　　　┃
+┃【今日のピークパフォーマンス方程式】　　　┃
+┃　　　　　　　　　　　　　　　　　　　　　┃
+┃　■一見、どんなに不利に見える特性も　　　┃
+┃　　組み上げ方次第で　　　　　　　　　　　┃
+┃　　　　　　　　　　　　　　　　　　　　　┃
+┃　　「代替不可能な場所」　　　　　　　　　┃
+┃　　　　　　　　　　　　　　　　　　　　　┃
+┃　　を築き上げるための武器となる。　　　　┃
+┃　　　　　　　　　　　　　　　　　　　　　┃
+┃　■強みをもたらしてくれる個性と捉え、　　┃
+┃　　その前提でシステムを作る、　　　　　　┃
+┃　　　　　　　　　　　　　　　　　　　　　┃
+┃　　といった発想を持ち、　　　　　　　　　┃
+┃　　トライアル＆エラーを重ねているうちに、┃
+┃　　　　　　　　　　　　　　　　　　　　　┃
+┃　　その特質があったなればこそ、　　　　　┃
+┃　　という世界に出られるのではないか。　　┃
+┃　　　　　　　　　　　　　　　　　　　　　┃
+┗━━━━━━━━━━━━「平成進化論」━━┛
+
+───────────────
+
+【当社よりご案内している各種音源について】
+
+　https://ssdlfiles.s3.amazonaws.com/list_ongen.pdf
+
+　より、ご確認下さいませ。
+
+
+▼音源ダウンロード等でのご不明な点、トラブル、
+　その他どんなことでも、どうぞご遠慮なく
+
+　https://form.os7.biz/f/aa1e924b/
+
+　から、お問い合わせ下さい。
+
+
+■10万円以上のご予算にて
+　音源購入をご検討下さっている方は
+
+　【音源コンシェルジュについて】
+　https://ssdlfiles.s3.amazonaws.com/concierge.html
+
+　をご覧ください。
+
+　まとめての音源購入を希望される方は
+　こちらからお求めになるのが絶対にお得です。
+
+
+▼「音源をスマホから聴くことができるのか、
+　できるとすれば、どうやって？」
+
+　とお尋ね頂くことがありますが、
+　もちろん可能です。
+
+　具体的な方法については
+　（当方とは無関係の方の文章ですが）
+
+　https://goo.gl/VU5pGy
+
+　が分かりやすいと思いますので、
+　ご参考までに。
+
+------------------------
+
+【鮒谷周史の、
+（少人数・双方向制）年間プログラムについて】
+
+
+　以下よりお申込み、
+　あるいは、詳細の確認を願います。
+
+【＜オンライン受講版＞詳細＆参加申し込み】
+　https://form.os7.biz/f/d1aed965/
+
+【＜音源受講版＞詳細＆参加申し込み】
+　https://form.os7.biz/f/728f8021/
+
+　※参加下さっている方のご感想（ごく一部）
+　　雰囲気を体感いただけるかと思います
+　https://ssdlfiles.s3.amazonaws.com/180404_testimonials_nenkan.pdf
+
+　
+▼正式なお申込みの前に、鮒谷に
+　直接相談したい方は以下より申し込み願います。
+
+　＜年間プログラム「個別」相談会
+　　お申込みフォーム＞
+　https://form.os7.biz/f/b8b26ad4/
+
+------------------------
+
+【 鮒谷周史の、
+　 個別コンサルティングのご案内 】
+
+
+＜お申し込みはこちらから。
+※6回コースがお得でオススメ、ほとんどの方が
+　6回コースでお申込み下さっています＞
+
+https://form.os7.biz/f/6387a7fb/
+
+
+＜「個人のキャリア開発・独立起業」等の
+　コンサルについてのご感想＞
+https://ssdlfiles.s3.amazonaws.com/testimonials_consulting_career.pdf
+
+＜「企業経営・売上増進・利益拡大」等の
+　コンサルについてのご感想＞
+https://ssdlfiles.s3.amazonaws.com/testimonials_consulting_manager.pdf
+
+＜終日個別コンサル＞
+https://form.os7.biz/f/a418da3e/
+
+＜半日個別コンサル＞
+https://form.os7.biz/f/e887efc4/
+
+
+┏━━━━━━━━━━━━━━━
+┃【 広告掲載のお問い合わせ等 】
+┃--------------------------------
+┃■メルマガ「平成進化論」に
+┃　広告を出してみませんか？
+┃
+┃▼号外広告　　 400,000円（税抜）
+┃
+┃※詳しい資料をご希望の方は↓から
+┃　https://ssdlfiles.s3.amazonaws.com/advertisement/index.html
+┣ ━━━━━━━━━━━━━━━
+┃■発行者からのメッセージとお願い：
+┃　https://ssdlfiles.s3.amazonaws.com/message.html
+┣━━━━━━━━━━━━━━━
+┃発行者
+┃株式会社ことば未来研究所・有限会社セカンドステージ
+┃鮒谷周史
+┃問い合わせ先 ： https://form.os7.biz/f/aa1e924b/
+┃※広告等でご案内しているサービス・商品を
+┃　ご利用になってのトラブル等について、
+┃　当方では一切責任を負いかねます。
+┃※解除はこちらから https://form.os7.biz/f/a36e9c71/
+┃※特定商取引法に基づく表記 https://is.gd/6S1UfC
+┃Copyright(c) &#39;03-&#39;24
+┃2nd-stage &amp; Kotoba Mirai Laboratory Co.,Ltd.
+┃&amp; Shuji Funatani All rights reserved.
+┗━━━━━━━━━━━━━━━
+</code></pre><pre tabindex="0"><code></code></pre>
+    </article>
+
+    
+    <span class="f6 gray mv3" title="Lastmod:  March 7, 2024. Published at: 2024/03/07.">
+      
+    </span>
+
+    
+
+  </section>
+
+  <div class="xPrevNextLink">
+  
+  <div class="xPrevNextLink_prev">
+    <a href="https://ss-osanai.github.io/backnumber/raw/2024/03/240306_0622/">【進化論】1・2・3・ダァーッ！の法則</a>
+  </div>
+  
+  
+</div>
+
+  <footer>
+  <div>
+    <p class="f6 gray mt6 lh-copy">
+      
+    </p>
+  </div>
+</footer>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+</body>
+
+</html>
