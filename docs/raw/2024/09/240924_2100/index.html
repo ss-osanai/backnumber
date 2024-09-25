@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html class="" lang="ja-jp" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+
+<head>
+  <meta charset="utf-8" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="【あと26時間】強い想い→物語→強固な信念→神話／自己強化システムとしての日記／自分用の大規模言語モデル" />
+<meta property="og:site_name" content="バックナンバー" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://ss-osanai.github.io/backnumber/raw/2024/09/240924_2100/" />
+<meta property="og:locale" content="ja-jp" />
+<meta property="article:published_time" content="2024-09-24
+" /> <meta property="article:modified_time" content="2024-09-24
+" />
+
+
+
+
+
+
+  <title>【あと26時間】強い想い→物語→強固な信念→神話／自己強化システムとしての日記／自分用の大規模言語モデル</title>
+  <link rel="canonical" href="https://ss-osanai.github.io/backnumber/raw/2024/09/240924_2100/" />
+  
+  
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css" />
+
+<link rel="stylesheet" href="https://ss-osanai.github.io/backnumber/css/style.css" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css" />
+
+<link rel="stylesheet" href="https://ss-osanai.github.io/backnumber/css/print.css" media="print" />
+<link rel="stylesheet" href="https://ss-osanai.github.io/backnumber/css/custom.css" />
+
+  <link rel="shortcut icon" href="https://ss-osanai.github.io/backnumber/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="https://ss-osanai.github.io/backnumber/apple-touch-icon.png" />
+</head>
+
+<body lang="ja-jp" class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns" itemscope
+  itemtype="http://schema.org/Article">
+
+  <a href="https://ss-osanai.github.io/backnumber/raw" class="b bb bw1 pb1 no-underline black">一覧</a>
+
+  <span class="b"> | </span>
+  <a href="https://ss-osanai.github.io/backnumber/search" class="b bb bw1 pb1 no-underline black">search</a>
+
+  <div class="xPrevNextLink">
+  
+  <div class="xPrevNextLink_prev">
+    <a href="https://ss-osanai.github.io/backnumber/raw/2024/09/240924_1804/">【あと29時間】盆ジョビ／希望していたポジションに／下積みの期間をも楽しむ／未来を志向するための中心システム</a>
+  </div>
+  
+  
+  <div class="xPrevNextLink_next">
+    <a href="https://ss-osanai.github.io/backnumber/raw/2024/09/240925_0951/">【進化論】（あと11時間）恋の喜びはいつも、不安の大きさに比例する。だから結婚生活は（以下、自粛）</a>
+  </div>
+  
+</div>
+
+  <br>
+<div id="font-controller">
+  <label for="fontSizeInput">フォントサイズ:</label>
+  <input type="number" id="fontSizeInput" value="15.0" min="1.0" style="width: 80px;" />
+  <button id="increaseFontSize">+</button>
+  <button id="decreaseFontSize">-</button>
+
+  <br>
+
+  <label for="fontWeightSelect">フォントウェイト:</label>
+  <select id="fontWeightSelect">
+    <option value="bold">Bold</option>
+    <option value="normal">Normal</option>
+  </select>
+
+  <br>
+
+  <label for="fontFamilySelect">フォントファミリー:</label>
+  <select id="fontFamilySelect">
+    <option value="'UDEV Gothic JPDOC', sans-serif">5: 'UDEV Gothic JPDOC', sans-serif</option>
+    <option value="'MS Gothic', sans-serif">1: 'MS Gothic', sans-serif</option>
+    <option value="'Noto Sans JP', sans-serif">2: 'Noto Sans JP', sans-serif</option>
+    <option value="'M PLUS 1 Code', sans-serif">3: 'M PLUS 1 Code', sans-serif</option>
+    <option value="'M PLUS 1 Code', monospace">4: 'M PLUS 1 Code', monospace</option>
+  </select>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const content = document.querySelector('#content pre code');
+      const fontSizeInput = document.getElementById('fontSizeInput');
+      const increaseFontSize = document.getElementById('increaseFontSize');
+      const decreaseFontSize = document.getElementById('decreaseFontSize');
+      const fontWeightSelect = document.getElementById('fontWeightSelect');
+
+      
+      function updateFontSize() {
+        content.style.fontSize = fontSizeInput.value + 'px';
+      }
+
+      increaseFontSize.addEventListener('click', function () {
+        fontSizeInput.value = parseFloat(fontSizeInput.value) + 1.0;
+        updateFontSize();
+      });
+
+      decreaseFontSize.addEventListener('click', function () {
+        fontSizeInput.value = parseFloat(fontSizeInput.value) - 1.0;
+        updateFontSize();
+      });
+
+      fontSizeInput.addEventListener('change', updateFontSize);
+
+      
+      fontWeightSelect.addEventListener('change', function () {
+        content.style.fontWeight = this.value;
+      });
+
+      
+      const fontFamilySelect = document.getElementById('fontFamilySelect');
+      fontFamilySelect.addEventListener('change', function () {
+        content.style.fontFamily = this.value;
+      });
+
+    });
+  </script>
+
+</div>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">【あと26時間】強い想い→物語→強固な信念→神話／自己強化システムとしての日記／自分用の大規模言語モデル</h1>
+    <span class="f6 gray">2024/09/24 21:00</span>
+
+    <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+      <pre tabindex="0"><code>■こんばんは、鮒谷です。
+
+
+　先日来、ご案内をしてきた
+
+　---------
+
+　【最強の自己暗示＆自信強化音源】
+
+～最強の自己暗示を用いて
+　根拠なき＆根拠ある自信を同時に手に入れ、
+
+　あなた独自の人生と成功のスタイルを
+　確立する方法
+
+　---------
+
+　をお聴きくださった方から
+　ご感想を頂戴しております。
+
+
+
+■今回は、その一部を以下にご紹介。
+
+　ご購入検討の際の、
+　ご参考にして頂けましたら幸いです。
+
+　※奥田龍史さん、いつも感想のご送付、
+　　ありがとうございます！
+　
+
+　（ここから）
+　---------------
+
+
+　鮒谷様
+
+
+　いつも大変お世話になっております。
+
+　今回も多くの気づきを
+　ありがとうございました。
+
+
+　今回はこれまで13年ほど
+　毎日書いてきた日記に対する
+
+　中間地点（前半地点！？）
+　での答え合わせと、
+
+　さらなるパラダイムシフトを期待して、
+　聴かせていただきました。
+
+
+　まず、答え合わせ的な学びからです。
+
+　「日々、未来のために言葉を作って、
+　　自分のあり方に織り込んでいく」
+
+　これを13年継続してきた結果、
+
+　自分用の大規模言語モデルが
+　できていることに気がつきました。
+
+　しかも、時系列に進化が見て取れる
+　動的な解釈ができるモデルです。
+
+
+　例えば、
+　今年はオリンピックイヤーでしたので、
+
+　オリンピックから刺激を受けて
+　ブログを書いていたときに、
+
+　ふと、過去のオリンピックイヤーでの
+　学びを確認したくなり、
+
+　自分のブログを検索してみたのですが、、、
+
+　2012年 ロンドン
+　2016年 リオデジャネイロ
+　2021年 東京
+
+　と、その時々の学びが綴られていて、
+
+　４年ごとに自分の進化を
+　見て取ることができ、
+
+　新しい気づきを得ることが
+　できたのです！
+
+　これは書き綴っていないと
+　絶対にできないことですね。
+
+
+　ちなみに、
+　「マイオリンピック」との造語を、
+
+　2024年パリオリンピックの
+　学びで作ったのですが、
+
+　実は過去にも作っていたことが
+　判明しました、、、
+
+　すでにマイLLMには
+　学習済みでした。（苦笑）
+
+
+　13年間、書き綴ってきたことを
+　振り返った時に、
+
+　この積み上げは実はすごいこと
+　なのではないかと思うと同時に、
+
+　これからの積み上げが
+　さらに楽しみになりました。
+
+
+　次に、パラダイムシフト的な学びです。
+
+　それは、
+
+　「強い想い」は
+　「自己強化システム＝日記」によって、
+
+　さらに強化され
+　「物語」となり、
+
+　その「物語」が「日記」により
+　さらに厚みを増すことで、
+
+　「強固な信念」になり
+　「神話」となっていく、
+
+　という、このシステムが
+　従来より深い理解となったことです。
+
+
+　ことさら、
+
+　「人と違うことをすることで
+　　差別化を図る」
+
+　と気を張らなくても、
+
+　自分と向き合って、
+　日々、自省を繰り返し、
+
+　軌道修正、加速度修正を
+　し続けるだけで、
+
+　自ずと立ち上がってくるものがあり、
+　それはすでに模倣困難になっている。
+
+　システムとして非常に美しいと
+　実感を伴って腑に落ちた次第です。
+
+
+　一定の時間、緩くではありますが
+　継続して学ばせていただいた結果、
+
+　このような感覚を得ることが
+　できていることには本当に感謝しております。
+
+　引き続き、緩く、ときには濃く、、、
+　よろしくお願いいたします。
+
+
+　（奥田 龍史さま）
+
+
+　---------
+　（ここまで）
+
+
+　奥田さん、改めてご感想、
+　ありがとうございます！
+
+
+
+■まさに日記を書き続ける効用は、
+
+　---------
+
+　「強い想い」は
+　「自己強化システム＝日記」によって、
+
+　さらに強化され
+　「物語」となり、
+
+　その「物語」が「日記」により
+　さらに厚みを増すことで、
+
+　「強固な信念」になり
+　「神話」となっていく、
+
+　---------
+
+　にあるんですよね。
+
+
+
+■日記を書き続けることによる
+　（根拠なき）自己暗示効果と、
+
+　そこから根を張り、
+　強化されていく、
+
+　（根拠ある）自信の獲得と強化、
+
+　によって、信念の形成が生まれて、
+　行動につながる上に、
+
+　諦めることがなくなるので
+　結果が出るに決まっている、
+
+　という流れ。
+
+
+
+■いったん、この土台ができれば
+　あとはそこに乗っているだけで、
+
+　それぞれの場所において
+　勝手に結果が出始める上に、
+
+　蓄積してきたものは永久に失われず、
+　複利で増大する一方ですから、
+
+
+　個人的には
+
+　【やらないという選択肢は
+　　存在しない】
+　
+　と考えているのですが、
+　実際にはやっていない人が大半なので、
+
+　（以下略）
+
+　ということになるのだと
+　考えています。
+
+
+
+■お金もかからないし、
+
+　続けた分だけ、
+　確実に無形資産がストックされる上に、
+
+　喪失リスクもゼロですから、
+
+　早期に取り掛かった人から
+　順に得をしていくのでしょう。
+
+
+
+■この音源の後半では、
+
+　年間プログラムに参加下さっている方の
+　ご感想コーナー？みたいな箇所も、
+
+　少し含まれていますが、
+　お聴きくださった方はお分かりの通り、
+
+　「続けてこられた方は皆さん、
+　　その価値を実感されている」
+
+　わけですね。
+
+
+
+■そして、やった人にしか分からないと
+　いうのも、また一つの真実。
+
+　ぜひこれを機に、
+　
+　【最強の自己暗示＆自信強化】
+
+　につながる日記を書き始めて
+　みられては、
+
+　あるいは既に行われている方は、
+　その改善のための教材とされてみては、
+
+　というのが、私（鮒谷）からの
+　ご提案となります。
+　
+
+
+■ここまで読まれて、
+　手元の資源（お金や時間等）を
+
+　【然るべき知識、パラダイム、
+　　あるいはシステム、習慣など】
+
+　に移し替えておきたいと
+　考えられた方に、
+
+　【最強の自己暗示＆自信強化、
+　　放談会音源】
+
+　をお勧めいたします。
+
+
+
+■ここしばらく、
+　ご案内を行ってきましたが、
+
+　【明日の23時59分（あと29時間）】
+
+　で割引価格での販売を終了します。
+
+　※終了後は約１万円の値上げとなります
+
+　お求めの方はお急ぎ下さい。
+
+
+
+■当音源は、
+
+　---------
+
+　▼日記放談会音源
+　　　　　↓
+　▼日記放談会音源（Q&amp;A編）
+　　　　　↓
+　▼最強の自己暗示＆自信強化音源　
+
+　---------
+
+　という一連の流れに連なる
+　音源となります。
+　
+　
+
+■（Q&amp;A編は任意ですが）
+　
+　現在、ご案内している、
+
+　【自己暗示＆自信強化音源】
+
+　は日記放談会音源の
+　アップグレード版的な位置づけなので、
+　
+　【基本編（本編）】
+
+　と
+　
+　【自己暗示＆自信強化音源】
+
+　は必ず、合わせてお聴き下さい。
+
+
+　
+■本音源は
+
+　【明日の23時59分（あと26時間）】
+
+　で割引価格での販売を終了します。
+
+　※終了後は約１万円の値上げとなります
+
+
+　---------
+
+
+　【最強の自己暗示＆自信強化音源】
+
+　～最強の自己暗示を用いて
+　　根拠なき＆根拠ある自信を同時に手に入れ、
+
+　　あなた独自の人生と成功のスタイルを
+　　確立する方法
+
+
+　▼当音源の購入にあたっては
+　　「日記放談会音源（基本編）」
+　　をすでにお求めいただいていることが
+　　前提となります。
+
+　　当音源と同時にお求めいただくことも
+　　可能です。
+
+　　その場合は、日記放談会音源についても
+　　30％オフにてご提供いたします。
+
+　　ご購入の際、特記事項欄にその旨、
+　　記載いただけましたら改めてご連絡いたします。
+
+
+　▼収録時間：約171分（約2時間51分）
+
+
+　▼価格：
+
+　　定価は35,000円（税抜）となりますが、
+　　音源リリース記念特別価格として、
+
+　　【期間限定】で
+
+　　30％オフ（約10,000円引き）の
+
+　　【24,500円（税抜）】
+
+　　にてご提供させて頂きます。
+
+
+　▼ご感想をお送り下さった方には
+　　当社音源販売にてご利用いただける
+
+　　【3,000円分の割引クーポン
+　　 （6ヶ月間有効）】
+
+　　も、合わせてご提供しますので、
+
+　　【24,500円（税抜）から、
+　　　 さらに実質3,000円引き 】
+
+　　にてお求め頂けることとなります。
+
+
+　【お申込みはこちらから】
+
+　▼カード決済をご希望の方はこちらから
+　　https://form.os7.biz/f/4179bb48/
+
+　▼銀行振込をご希望の方はこちらから
+　　https://form.os7.biz/f/882a790f/
+
+
+　---------
+
+
+
+■上述の通り、この音源の内容を
+　正確に理解していただくためには、
+
+　既に多くの方がお求め下さっているとは
+　思いますが、あらかじめ
+
+　【日記放談会音源】
+
+　を聴くことを前提（必須）と
+　させて頂いています。
+
+
+
+■まだ聴かれていない方は、
+　この機会に合わせてお聴きください。
+
+
+　特別に
+
+　【最強の自己暗示＆自信強化音源】
+
+　を案内している期間に限り、
+　
+　【日記音源】
+
+　も合わせて、30％（約16,000円）引き
+　にてご提供いたします。
+
+
+　---------
+
+　鮒谷周史の、圧巻！
+ 
+　「転落続きの人生が
+　　日記を書いたら蘇生した話」
+
+　放談会音源 基本編
+　（収録時間：7 時間 56 分）
+
+　▼カードでのお求めはこちらから
+　　https://form.os7.biz/f/d2687593/
+
+　▼銀行振込でのお求めはこちらから
+　　https://form.os7.biz/f/c604a091/
+
+
+　＜当音源をお聴きくださった方から
+　　お寄せいただいたご感想紹介＞
+　　https://ssdlfiles.s3.amazonaws.com/testimonials_nikki.pdf
+
+　＜当音源をお聴きになり、
+　　３か月～１年経過してのちに
+　　お寄せいただいたご感想紹介＞
+　　https://ssdlfiles.s3.amazonaws.com/testimonials_nikki_after.pdf
+
+　---------
+
+
+■ご案内の通り、　
+
+　【明日の23時59分（あと26時間）】
+
+　までとなりますので、
+　ご希望の方は今すぐどうぞ。
+
+
+　　　　　　　　　　　　鮒谷周史拝
+</code></pre><pre tabindex="0"><code></code></pre>
+    </article>
+
+    
+    <span class="f6 gray mv3" title="Lastmod:  September 24, 2024. Published at: 2024/09/24.">
+      
+    </span>
+
+    
+
+  </section>
+
+  <div class="xPrevNextLink">
+  
+  <div class="xPrevNextLink_prev">
+    <a href="https://ss-osanai.github.io/backnumber/raw/2024/09/240924_1804/">【あと29時間】盆ジョビ／希望していたポジションに／下積みの期間をも楽しむ／未来を志向するための中心システム</a>
+  </div>
+  
+  
+  <div class="xPrevNextLink_next">
+    <a href="https://ss-osanai.github.io/backnumber/raw/2024/09/240925_0951/">【進化論】（あと11時間）恋の喜びはいつも、不安の大きさに比例する。だから結婚生活は（以下、自粛）</a>
+  </div>
+  
+</div>
+
+  <footer>
+  <div>
+    <p class="f6 gray mt6 lh-copy">
+      
+    </p>
+  </div>
+</footer>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+</body>
+
+</html>
