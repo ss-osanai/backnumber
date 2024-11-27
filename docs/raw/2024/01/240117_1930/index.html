@@ -138,6 +138,23 @@
 
 </div>
 
+  <br>
+<div id="copy-button">
+  <button id="copy">タイトル + 本文コピー</button>
+
+  <script>
+    document.getElementById('copy').addEventListener('click', function () {
+      const title = document.querySelector('title').textContent;
+      const content = document.querySelector('#content pre code').textContent;
+      const text = title + '\n\n' + content;
+      navigator.clipboard.writeText(text).then(function () {
+        alert('コピーしました');
+      });
+    });
+  </script>
+
+</div>
+
   <section id="main" class="mt5">
     <h1 itemprop="name" id="title">【進化論】（あと２日）大器晩成の典型例！引導を渡されてからの「7740余万部」の大躍進</h1>
     <span class="f6 gray">2024/01/17 19:30</span>

@@ -138,6 +138,23 @@
 
 </div>
 
+  <br>
+<div id="copy-button">
+  <button id="copy">タイトル + 本文コピー</button>
+
+  <script>
+    document.getElementById('copy').addEventListener('click', function () {
+      const title = document.querySelector('title').textContent;
+      const content = document.querySelector('#content pre code').textContent;
+      const text = title + '\n\n' + content;
+      navigator.clipboard.writeText(text).then(function () {
+        alert('コピーしました');
+      });
+    });
+  </script>
+
+</div>
+
   <section id="main" class="mt5">
     <h1 itemprop="name" id="title">【不測の事態発生（汗）】愚か者は「賢い人による賢い人のためのノウハウ」に惑わされないことが大事</h1>
     <span class="f6 gray">2021/06/01 00:10</span>

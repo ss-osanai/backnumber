@@ -138,6 +138,23 @@
 
 </div>
 
+  <br>
+<div id="copy-button">
+  <button id="copy">タイトル + 本文コピー</button>
+
+  <script>
+    document.getElementById('copy').addEventListener('click', function () {
+      const title = document.querySelector('title').textContent;
+      const content = document.querySelector('#content pre code').textContent;
+      const text = title + '\n\n' + content;
+      navigator.clipboard.writeText(text).then(function () {
+        alert('コピーしました');
+      });
+    });
+  </script>
+
+</div>
+
   <section id="main" class="mt5">
     <h1 itemprop="name" id="title">【進化論。】想いを実現する最短距離は、「石段を登る旅行者」になること</h1>
     <span class="f6 gray">2006/03/28 01:33</span>

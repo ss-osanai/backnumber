@@ -138,6 +138,23 @@
 
 </div>
 
+  <br>
+<div id="copy-button">
+  <button id="copy">タイトル + 本文コピー</button>
+
+  <script>
+    document.getElementById('copy').addEventListener('click', function () {
+      const title = document.querySelector('title').textContent;
+      const content = document.querySelector('#content pre code').textContent;
+      const text = title + '\n\n' + content;
+      navigator.clipboard.writeText(text).then(function () {
+        alert('コピーしました');
+      });
+    });
+  </script>
+
+</div>
+
   <section id="main" class="mt5">
     <h1 itemprop="name" id="title">【鮒谷コンテンツの中核・核心・心臓部】鮒谷が、各コンテンツ間に「相互リンクを張り巡らす」目的とは</h1>
     <span class="f6 gray">2017/05/25 21:19</span>

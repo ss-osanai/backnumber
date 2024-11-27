@@ -65,6 +65,10 @@
   </div>
   
   
+  <div class="xPrevNextLink_next">
+    <a href="https://ss-osanai.github.io/backnumber/raw/2024/11/241125_1247/">【進化論】（あと２日）後からゆっくりさせて頂く、という選択</a>
+  </div>
+  
 </div>
 
   <br>
@@ -129,6 +133,23 @@
         content.style.fontFamily = this.value;
       });
 
+    });
+  </script>
+
+</div>
+
+  <br>
+<div id="copy-button">
+  <button id="copy">タイトル + 本文コピー</button>
+
+  <script>
+    document.getElementById('copy').addEventListener('click', function () {
+      const title = document.querySelector('title').textContent;
+      const content = document.querySelector('#content pre code').textContent;
+      const text = title + '\n\n' + content;
+      navigator.clipboard.writeText(text).then(function () {
+        alert('コピーしました');
+      });
     });
   </script>
 
@@ -1217,6 +1238,10 @@
     <a href="https://ss-osanai.github.io/backnumber/raw/2024/11/241123_0122/">【進化論】（あと３日）わずか「32時間＋アルファ」の投資が一生モノの技術となり、財産となる</a>
   </div>
   
+  
+  <div class="xPrevNextLink_next">
+    <a href="https://ss-osanai.github.io/backnumber/raw/2024/11/241125_1247/">【進化論】（あと２日）後からゆっくりさせて頂く、という選択</a>
+  </div>
   
 </div>
 

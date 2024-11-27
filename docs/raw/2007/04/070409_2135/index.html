@@ -138,6 +138,23 @@
 
 </div>
 
+  <br>
+<div id="copy-button">
+  <button id="copy">タイトル + 本文コピー</button>
+
+  <script>
+    document.getElementById('copy').addEventListener('click', function () {
+      const title = document.querySelector('title').textContent;
+      const content = document.querySelector('#content pre code').textContent;
+      const text = title + '\n\n' + content;
+      navigator.clipboard.writeText(text).then(function () {
+        alert('コピーしました');
+      });
+    });
+  </script>
+
+</div>
+
   <section id="main" class="mt5">
     <h1 itemprop="name" id="title">【進化論】香港4日目・超地域密着マーケティング＋「逆算思考」と「かけ算思考」で次の一手を仕掛ける</h1>
     <span class="f6 gray">2007/04/09 21:35</span>
