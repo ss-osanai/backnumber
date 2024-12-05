@@ -6,7 +6,16 @@
     <description>Recent content on バックナンバー</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Tue, 03 Dec 2024 21:59:58 +0900</lastBuildDate><atom:link href="https://ss-osanai.github.io/backnumber/raw/2024/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 05 Dec 2024 06:40:36 +0900</lastBuildDate><atom:link href="https://ss-osanai.github.io/backnumber/raw/2024/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[SPAM] 【進化論】老親問題は３つの軸が複雑に絡み合う</title>
+      <link>https://ss-osanai.github.io/backnumber/raw/2024/12/241205_0640/</link>
+      <pubDate>Thu, 05 Dec 2024 06:40:36 +0900</pubDate>
+      
+      <guid>https://ss-osanai.github.io/backnumber/raw/2024/12/241205_0640/</guid>
+      <description>Return-Path: &amp;lt;mailmag-0000114948@return.mag2letter.com&amp;gt; Delivered-To: osanai@2nd-stage.jp Received: from yellow-horse-39606ee2537fb87b.znlc.jp by yellow-horse-39606ee2537fb87b.znlc.jp with LMTP id 2HosF9XMUGfBFh4A34yLGQ (envelope-from &amp;lt;mailmag-0000114948@return.mag2letter.com&amp;gt;) for &amp;lt;osanai@2nd-stage.jp&amp;gt;; Thu, 05 Dec 2024 06:42:45 +0900 Received: from chervil.mag2tegami.com (oregano.mag2otegami.com [180.211.85.177]) by yellow-horse-39606ee2537fb87b.znlc.jp (Postfix) with ESMTPS id 2A383839D7 for &amp;lt;osanai@2nd-stage.jp&amp;gt;; Thu, 5 Dec 2024 06:42:43 +0900 (JST) Authentication-Results: yellow-horse-39606ee2537fb87b.znlc.jp; dmarc=pass (p=none dis=none) header.from=mag2letter.com Authentication-Results: yellow-horse-39606ee2537fb87b.znlc.jp; spf=pass smtp.mailfrom=return.mag2letter.com Authentication-Results: yellow-horse-39606ee2537fb87b.znlc.jp; dkim=fail reason=&amp;#34;signature verification failed&amp;#34; (1024-bit key, unprotected) header.d=mag2tegami.com header.i=free-20131107@mag2tegami.com header.a=rsa-sha256 header.s=free-20131107 header.b=REzNmk9c DKIM-Signature: v=1;</description>
+    </item>
+    
     <item>
       <title>【進化論】親孝行は、必ずしも親のためだけにあらず</title>
       <link>https://ss-osanai.github.io/backnumber/raw/2024/12/241203_2159/</link>
