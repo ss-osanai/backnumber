@@ -6,14 +6,41 @@
     <description>Recent content on バックナンバー</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Thu, 05 Dec 2024 06:40:36 +0900</lastBuildDate><atom:link href="https://ss-osanai.github.io/backnumber/raw/2024/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Dec 2024 09:15:07 +0900</lastBuildDate><atom:link href="https://ss-osanai.github.io/backnumber/raw/2024/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[SPAM] 【進化論】老親問題は３つの軸が複雑に絡み合う</title>
+      <title>【進化論】「そうなることにきまっている」ものは、解決の手順が決まっていることが多い</title>
+      <link>https://ss-osanai.github.io/backnumber/raw/2024/12/241209_0915/</link>
+      <pubDate>Mon, 09 Dec 2024 09:15:07 +0900</pubDate>
+      
+      <guid>https://ss-osanai.github.io/backnumber/raw/2024/12/241209_0915/</guid>
+      <description>Return-Path: &amp;lt;mailmag-0000114948@return.mag2letter.com&amp;gt; Delivered-To: osanai@2nd-stage.jp Received: from yellow-horse-39606ee2537fb87b.znlc.jp by yellow-horse-39606ee2537fb87b.znlc.jp with LMTP id aFQIExs3VmdSlCIA34yLGQ (envelope-from &amp;lt;mailmag-0000114948@return.mag2letter.com&amp;gt;) for &amp;lt;osanai@2nd-stage.jp&amp;gt;; Mon, 09 Dec 2024 09:17:31 +0900 Received: from savory.mag2tegami.com (rosemary.mag2otegami.com [116.197.174.133]) by yellow-horse-39606ee2537fb87b.znlc.jp (Postfix) with ESMTPS id EB76C81F39 for &amp;lt;osanai@2nd-stage.jp&amp;gt;; Mon, 9 Dec 2024 09:17:30 +0900 (JST) Authentication-Results: yellow-horse-39606ee2537fb87b.znlc.jp; dmarc=pass (p=none dis=none) header.from=mag2letter.com Authentication-Results: yellow-horse-39606ee2537fb87b.znlc.jp; spf=pass smtp.mailfrom=return.mag2letter.com Authentication-Results: yellow-horse-39606ee2537fb87b.znlc.jp; dkim=fail reason=&amp;#34;signature verification failed&amp;#34; (1024-bit key, unprotected) header.d=mag2tegami.com header.i=free-20131107@mag2tegami.com header.a=rsa-sha256 header.s=free-20131107 header.b=YQ5MqH2i DKIM-Signature: v=1;</description>
+    </item>
+    
+    <item>
+      <title>【進化論】「知っているつもり」と「知っている」の間</title>
+      <link>https://ss-osanai.github.io/backnumber/raw/2024/12/241208_0504/</link>
+      <pubDate>Sun, 08 Dec 2024 05:04:31 +0900</pubDate>
+      
+      <guid>https://ss-osanai.github.io/backnumber/raw/2024/12/241208_0504/</guid>
+      <description>Return-Path: &amp;lt;mailmag-0000114948@return.mag2letter.com&amp;gt; Delivered-To: osanai@2nd-stage.jp Received: from yellow-horse-39606ee2537fb87b.znlc.jp by yellow-horse-39606ee2537fb87b.znlc.jp with LMTP id 4OZvGdmqVGcCWyEA34yLGQ (envelope-from &amp;lt;mailmag-0000114948@return.mag2letter.com&amp;gt;) for &amp;lt;osanai@2nd-stage.jp&amp;gt;; Sun, 08 Dec 2024 05:06:49 +0900 Received: from chervil.mag2tegami.com (oregano.mag2otegami.com [116.197.174.178]) by yellow-horse-39606ee2537fb87b.znlc.jp (Postfix) with ESMTPS id E39D882B2E for &amp;lt;osanai@2nd-stage.jp&amp;gt;; Sun, 8 Dec 2024 05:06:48 +0900 (JST) Authentication-Results: yellow-horse-39606ee2537fb87b.znlc.jp; dmarc=pass (p=none dis=none) header.from=mag2letter.com Authentication-Results: yellow-horse-39606ee2537fb87b.znlc.jp; spf=pass smtp.mailfrom=return.mag2letter.com Authentication-Results: yellow-horse-39606ee2537fb87b.znlc.jp; dkim=fail reason=&amp;#34;signature verification failed&amp;#34; (1024-bit key, unprotected) header.d=mag2tegami.com header.i=free-20131107@mag2tegami.com header.a=rsa-sha256 header.s=free-20131107 header.b=ufhd0+Ar DKIM-Signature: v=1;</description>
+    </item>
+    
+    <item>
+      <title>【進化論】（これが最後のご案内）親について考えることは、自分の未来について考えること</title>
+      <link>https://ss-osanai.github.io/backnumber/raw/2024/12/241206_1715/</link>
+      <pubDate>Fri, 06 Dec 2024 17:15:14 +0900</pubDate>
+      
+      <guid>https://ss-osanai.github.io/backnumber/raw/2024/12/241206_1715/</guid>
+      <description>Return-Path: &amp;lt;mailmag-0000114948@return.mag2letter.com&amp;gt; Delivered-To: osanai@2nd-stage.jp Received: from yellow-horse-39606ee2537fb87b.znlc.jp by yellow-horse-39606ee2537fb87b.znlc.jp with LMTP id CJ19MtOyUmeEux8A34yLGQ (envelope-from &amp;lt;mailmag-0000114948@return.mag2letter.com&amp;gt;) for &amp;lt;osanai@2nd-stage.jp&amp;gt;; Fri, 06 Dec 2024 17:16:19 +0900 Received: from chervil.mag2tegami.com (oregano.mag2otegami.com [180.211.85.172]) by yellow-horse-39606ee2537fb87b.znlc.jp (Postfix) with ESMTPS id 1BD65828BA for &amp;lt;osanai@2nd-stage.jp&amp;gt;; Fri, 6 Dec 2024 17:16:19 +0900 (JST) Authentication-Results: yellow-horse-39606ee2537fb87b.znlc.jp; dmarc=pass (p=none dis=none) header.from=mag2letter.com Authentication-Results: yellow-horse-39606ee2537fb87b.znlc.jp; spf=pass smtp.mailfrom=return.mag2letter.com Authentication-Results: yellow-horse-39606ee2537fb87b.znlc.jp; dkim=fail reason=&amp;#34;signature verification failed&amp;#34; (1024-bit key, unprotected) header.d=mag2tegami.com header.i=free-20131107@mag2tegami.com header.a=rsa-sha256 header.s=free-20131107 header.b=ToD2HkNg DKIM-Signature: v=1;</description>
+    </item>
+    
+    <item>
+      <title>【進化論】老親問題は３つの軸が複雑に絡み合う</title>
       <link>https://ss-osanai.github.io/backnumber/raw/2024/12/241205_0640/</link>
       <pubDate>Thu, 05 Dec 2024 06:40:36 +0900</pubDate>
       
       <guid>https://ss-osanai.github.io/backnumber/raw/2024/12/241205_0640/</guid>
-      <description>Return-Path: &amp;lt;mailmag-0000114948@return.mag2letter.com&amp;gt; Delivered-To: osanai@2nd-stage.jp Received: from yellow-horse-39606ee2537fb87b.znlc.jp by yellow-horse-39606ee2537fb87b.znlc.jp with LMTP id 2HosF9XMUGfBFh4A34yLGQ (envelope-from &amp;lt;mailmag-0000114948@return.mag2letter.com&amp;gt;) for &amp;lt;osanai@2nd-stage.jp&amp;gt;; Thu, 05 Dec 2024 06:42:45 +0900 Received: from chervil.mag2tegami.com (oregano.mag2otegami.com [180.211.85.177]) by yellow-horse-39606ee2537fb87b.znlc.jp (Postfix) with ESMTPS id 2A383839D7 for &amp;lt;osanai@2nd-stage.jp&amp;gt;; Thu, 5 Dec 2024 06:42:43 +0900 (JST) Authentication-Results: yellow-horse-39606ee2537fb87b.znlc.jp; dmarc=pass (p=none dis=none) header.from=mag2letter.com Authentication-Results: yellow-horse-39606ee2537fb87b.znlc.jp; spf=pass smtp.mailfrom=return.mag2letter.com Authentication-Results: yellow-horse-39606ee2537fb87b.znlc.jp; dkim=fail reason=&amp;#34;signature verification failed&amp;#34; (1024-bit key, unprotected) header.d=mag2tegami.com header.i=free-20131107@mag2tegami.com header.a=rsa-sha256 header.s=free-20131107 header.b=REzNmk9c DKIM-Signature: v=1;</description>
+      <description>━━━━━━━━━━━━━━━━━━━ 令和6年12月1日 平成進化論 （7743日（21年間）毎日連続配信、累計9114号） ■（明後日に開催） 老</description>
     </item>
     
     <item>
