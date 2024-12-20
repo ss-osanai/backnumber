@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html class="" lang="ja-jp" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+
+<head>
+  <meta charset="utf-8" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="【進化論】何者かになれるとともに、何者であったかが明らかになるのが日記＆発信" />
+<meta property="og:site_name" content="バックナンバー" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://ss-osanai.github.io/backnumber/raw/2024/12/241220_0658/" />
+<meta property="og:locale" content="ja-jp" />
+<meta property="article:published_time" content="2024-12-20
+" /> <meta property="article:modified_time" content="2024-12-20
+" />
+
+
+
+
+
+
+  <title>【進化論】何者かになれるとともに、何者であったかが明らかになるのが日記＆発信</title>
+  <link rel="canonical" href="https://ss-osanai.github.io/backnumber/raw/2024/12/241220_0658/" />
+  
+  
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css" />
+
+<link rel="stylesheet" href="https://ss-osanai.github.io/backnumber/css/style.css" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css" />
+
+<link rel="stylesheet" href="https://ss-osanai.github.io/backnumber/css/print.css" media="print" />
+<link rel="stylesheet" href="https://ss-osanai.github.io/backnumber/css/custom.css" />
+
+  <link rel="shortcut icon" href="https://ss-osanai.github.io/backnumber/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="https://ss-osanai.github.io/backnumber/apple-touch-icon.png" />
+</head>
+
+<body lang="ja-jp" class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns" itemscope
+  itemtype="http://schema.org/Article">
+
+  <a href="https://ss-osanai.github.io/backnumber/raw" class="b bb bw1 pb1 no-underline black">一覧</a>
+
+  <span class="b"> | </span>
+  <a href="https://ss-osanai.github.io/backnumber/search" class="b bb bw1 pb1 no-underline black">search</a>
+
+  <div class="xPrevNextLink">
+  
+  <div class="xPrevNextLink_prev">
+    <a href="https://ss-osanai.github.io/backnumber/raw/2024/12/241219_0135/">【進化論】あなたは絶望を与える側に立ちたいのか、与えられる側に立ちたいのか</a>
+  </div>
+  
+  
+</div>
+
+  <br>
+<div id="font-controller">
+  <label for="fontSizeInput">フォントサイズ:</label>
+  <input type="number" id="fontSizeInput" value="15.0" min="1.0" style="width: 80px;" />
+  <button id="increaseFontSize">+</button>
+  <button id="decreaseFontSize">-</button>
+
+  <br>
+
+  <label for="fontWeightSelect">フォントウェイト:</label>
+  <select id="fontWeightSelect">
+    <option value="bold">Bold</option>
+    <option value="normal">Normal</option>
+  </select>
+
+  <br>
+
+  <label for="fontFamilySelect">フォントファミリー:</label>
+  <select id="fontFamilySelect">
+    <option value="'UDEV Gothic JPDOC', sans-serif">5: 'UDEV Gothic JPDOC', sans-serif</option>
+    <option value="'MS Gothic', sans-serif">1: 'MS Gothic', sans-serif</option>
+    <option value="'Noto Sans JP', sans-serif">2: 'Noto Sans JP', sans-serif</option>
+    <option value="'M PLUS 1 Code', sans-serif">3: 'M PLUS 1 Code', sans-serif</option>
+    <option value="'M PLUS 1 Code', monospace">4: 'M PLUS 1 Code', monospace</option>
+  </select>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const content = document.querySelector('#content pre code');
+      const fontSizeInput = document.getElementById('fontSizeInput');
+      const increaseFontSize = document.getElementById('increaseFontSize');
+      const decreaseFontSize = document.getElementById('decreaseFontSize');
+      const fontWeightSelect = document.getElementById('fontWeightSelect');
+
+      
+      function updateFontSize() {
+        content.style.fontSize = fontSizeInput.value + 'px';
+      }
+
+      increaseFontSize.addEventListener('click', function () {
+        fontSizeInput.value = parseFloat(fontSizeInput.value) + 1.0;
+        updateFontSize();
+      });
+
+      decreaseFontSize.addEventListener('click', function () {
+        fontSizeInput.value = parseFloat(fontSizeInput.value) - 1.0;
+        updateFontSize();
+      });
+
+      fontSizeInput.addEventListener('change', updateFontSize);
+
+      
+      fontWeightSelect.addEventListener('change', function () {
+        content.style.fontWeight = this.value;
+      });
+
+      
+      const fontFamilySelect = document.getElementById('fontFamilySelect');
+      fontFamilySelect.addEventListener('change', function () {
+        content.style.fontFamily = this.value;
+      });
+
+    });
+  </script>
+
+</div>
+
+  <br>
+<div id="copy-button">
+  <button id="copy">タイトル + 本文コピー</button>
+
+  <script>
+    document.getElementById('copy').addEventListener('click', function () {
+      const title = document.querySelector('title').textContent;
+      const content = document.querySelector('#content pre code').textContent;
+      const text = title + '\n\n' + content;
+      navigator.clipboard.writeText(text).then(function () {
+        alert('コピーしました');
+      });
+    });
+  </script>
+
+</div>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">【進化論】何者かになれるとともに、何者であったかが明らかになるのが日記＆発信</h1>
+    <span class="f6 gray">2024/12/20 06:58</span>
+
+    <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+      <pre tabindex="0"><code>━━━━━━━━━━━━━━━━━━━
+令和6年12月19日 平成進化論
+（7750日（21年間）毎日連続配信、累計9122号）
+
+■何者かになれるとともに、何者であったかが
+　明らかになるのが日記＆発信
+
+　有限会社セカンドステージ代表取締役
+　京都大学大学院在籍
+
+　　　　　鮒谷周史（ふなたにしゅうじ）
+
+━━━━━━━━━━━━━━━━━━━
+
+
+■おはようございます、鮒谷です。
+
+
+　昨日は先日来、ご案内していた
+
+　【子どもたちの書く力をいかにして養うか
+   　～日本の未来のために】
+
+　のセミナーを開催しておりました。
+
+
+
+■参加下さった平野さんより早速、
+　以下のご感想を頂戴いたしました。
+
+　（平野さん、ありがとうございます！）
+
+
+　（ここから）
+　--------------------
+
+
+　鮒谷さん、神山さん
+
+
+　この度はセミナーの開催、
+　ありがとうございました。
+
+　2歳の子供を持つ親として、
+　これからの時代において、
+
+　「生成AIに書かせること」
+
+　と
+
+　「自分で書くこと」の違いを、
+　どのように子供に教えていけば良いのか、
+
+　という問題意識をずっと抱えていました。
+
+
+　私は毎日のブログ更新を続けている一方で
+　仕事では生成AIを積極的に活用しています。
+
+　しかし、将来子供が
+
+　「学校の課題を生成AIでやりたい」
+
+　と言い出した時に、どのように
+　答えるべきか自信が持てなかったのです。
+
+
+　私としては、
+
+　「作文はダメだけれど、アイデア出しや
+　　壁打ちとしては使っていいんだよ」
+　
+　と伝えたい気持ちがありました。
+
+
+　しかし実際には、
+　
+　私自身が仕事で生成AIが出力したテキストを
+　そのまま資料に反映させることもあり（汗）、
+
+　言っていることとやっていることが
+　矛盾することになるので、
+　
+　苦悩していました。
+
+　だからこそ、子供にどのように伝えるべきかを
+　明確に言語化しておきたかったのです。
+
+
+　今回のセミナーでは、
+
+　この問題意識に対して
+　明確な言語化をしていただき、
+
+　参加してよかったと思いました。
+
+
+　また、私は鮒谷さんから
+　20代後半の頃に
+
+　「時々刻々の記」
+
+　を習慣化することを
+　教えていただきました。
+
+
+　自分の子供にもぜひこの習慣を
+　身につけてもらいたいと思いながらも、
+
+　「ブログを書いたらいいよ」
+
+　と言うわけにもいかず、
+　どのように教育すべきか悩んでいました。
+
+　その悩みに対する明確な回答も神山さんから
+　教えていただくことができました。
+
+
+　セミナーでは、何度か
+　鳥肌が立つ言葉がありました。
+
+　書くことのセミナーなのに、
+　言葉の力を体感する時となりました。
+
+　本当に有益なセミナーを
+　開催していただき感謝申し上げます。
+
+　　　　　　　　　（平野さま）
+
+
+　--------------------
+　（ここまで）
+
+
+
+■平野さん、改めて昨日は
+　ありがとうございました！
+
+
+　「日記（時々刻々の記）」を今なお、
+　書き続けて下さっているとのこと、
+
+　ならびに、
+
+　嬉しく拝見すると同時に、
+　お子さんに対する作文習慣について、
+
+　伝えるためのヒントを今回のセミナーで
+　学んで下さったとのこと、
+
+　とても嬉しく思います。
+
+
+
+■神山さんからの、
+
+　「コップの水の例え話」
+
+　もありましたが、
+
+　お子さんが時間をかけて
+　自主性を育まれ、
+
+　文章を書く習慣を
+　身につけられると良いですね。
+
+　（お子さんが２歳とのことで、
+　　まだ少々早いとは思いますが、、、）
+
+
+　
+■セミナー終了後、すぐにご感想を
+　お寄せくださり、ありがとうございました。
+
+　平野さん、今後とも引き続き、
+　よろしくお願いいたします！
+
+
+
+■セミナー自体は昨日、
+　終了いたしましたが、
+
+　ご希望の方には動画＆音声にて
+　ご提供いたしますので、
+
+　以下よりお申込み下さい。
+
+
+　--------------------
+
+　【子どもたちの書く力をいかにして養うか
+   　～日本の未来のために】
+
+
+　【講師】
+
+　▼神山 典士 先生
+
+　（ノンフィクション作家
+　　ふるさと大好き全国作文協議会事務局長
+
+　　大宅壮ーノンフィクション大賞
+　　小学館ノンフィクション大賞優秀賞
+　　日本雑誌ジャーナリズム大賞等、受賞）
+
+　※全国読書感想文コンクール
+　　課題図書選定（2012年）
+
+
+　▼鮒谷周史
+
+
+　【動画＆音声コンテンツ費用】
+
+　10,000円（税抜）
+
+　【お申込みはこちらから】
+　https://form.os7.biz/f/2d40104f/
+
+　--------------------
+　
+
+━━━━━━━━━━━━━━━━━━━
+＜今日のピークパフォーマンス方程式＞
+
+■何者かになれるとともに、何者であったかが
+　明らかになるのが日記＆発信
+
+───────────────────
+
+
+■昨日の神山さんのセミナーでは
+　冒頭に、
+　
+　神山さんと脳科学者、茂木健一郎さんの
+　対談の動画が流されました。
+
+
+
+■そこで
+
+　【書くことで脳は本気になる】
+
+　という茂木健一郎さんの言葉が
+　紹介され、
+
+　続けて有名な、
+
+　【大谷翔平さんの
+　　64マスの目標達成シート】
+
+　の話もされました。
+
+
+
+■これまでの長年の日記経験からも
+
+　【書くことで脳は本気になる】
+
+　のは本当だと思います。
+
+
+　書くほどに、
+　書いた内容に意識が向く上に、
+　
+　最初は粗かった解像度も高まり、
+　行動する動機につながります。
+　
+
+
+■私（鮒谷）は、
+
+　日記ならびにメルマガを書き続け、
+　多くの願いを実現させてきましたが、
+
+　書く習慣がなければ到底、実現不可能な
+　ことばかりだったと思います。
+
+
+
+■また、ある程度の分量の文章を
+　書いてこなければ、
+　
+　【そもそも自分が何をやりたいのか】
+
+　も明確化されなかったことでしょう。
+
+
+　
+■文章を書くほど、
+
+　「結局、このことについて
+　　書いてしまうんだよね」
+　
+　というテーマが、
+
+　あなたや私（鮒谷）にとって
+　人生を傾けるに足るテーマ。
+
+
+
+■日々、自分の生活を振り返っては
+　言葉に落とすことでのみ知らされる、
+
+　深い所に眠っていた自分自身の
+　願望でもあるようです。
+
+
+
+■要するに、文章を書き、
+　さらにそれを発信していくと自分が
+
+　「何者かになれる」
+
+　機会が増えると同時に、
+
+　「何者であったかが
+　　明らかになる」
+
+　という面も確実にあるのです。
+
+
+
+■文章を書く習慣を持つ人と
+　そうでない人の人生において、
+
+　最初は少しづつ、
+　やがて大きな差が生まれてくる、
+
+　理由の一つだと思います。
+
+
+
+■そんな内容について、
+
+　【約8時間！】
+
+　に渡って詳細にお伝えしている
+
+　【日記放談会音源】
+
+　というものがありますが、
+
+
+　この機会に、
+　まだ聴かれていない方に向けて、
+
+　明日（21日（土））の23時59分までは
+　30％オフの
+
+　【48,000円⇒33,600円（税抜）】
+
+　にて定価の15,000円以上、
+　お安くお求め頂けるようにしておきます。
+
+
+
+■年末年始は、
+
+　【絶好の大量天引きチャンス到来！】
+
+　の時期となるので、
+　ぜひこの機会に学びを深め、
+
+　来年は年初から一気に
+　スタートダッシュをかけて頂ければと。
+
+
+
+■音源内容の詳細については、
+
+　以下の案内文、ならびに感想集を
+　ご覧いただき、
+
+　ご納得の上、下記フォームより
+　お求めくださいませ。
+
+　※下記のリンクをたどって感想集も
+　　合わせてご覧の上、お求め下さい。
+
+
+　--------------------
+
+　鮒谷周史の、圧巻！
+ 
+　「転落続きの人生が、
+　　日記を書いたら蘇生した話」
+　放談会音源 基本編
+
+（収録時間：7 時間 56 分
+　大阪開催分：3 時間 44 分、
+　東京開催分：4 時間 12 分）
+
+　大阪と東京にて開催したセミナーを
+　完全収録したものです。
+
+
+　▼カードでのお求めはこちらから
+　　https://form.os7.biz/f/d2687593/
+
+　▼銀行振込でのお求めはこちらから
+　　https://form.os7.biz/f/c604a091/
+
+　＜当音源をお聴きくださった方から
+　　お寄せいただいたご感想紹介＞
+　　https://ssdlfiles.s3.amazonaws.com/testimonials_nikki.pdf
+
+　＜当音源をお聴きになり、
+　　３か月～１年経過してのちに
+　　お寄せいただいたご感想紹介＞
+　　https://ssdlfiles.s3.amazonaws.com/testimonials_nikki_after.pdf
+
+　--------------------
+
+
+　今日も人生とビジネスを
+　楽しみましょう！
+
+
+───────────────
+
+【当社よりご案内している各種音源について】
+
+　https://ssdlfiles.s3.amazonaws.com/list_ongen.pdf
+
+　より、ご確認下さいませ。
+
+
+▼音源ダウンロード等でのご不明な点、トラブル、
+　その他どんなことでも、どうぞご遠慮なく
+
+　https://form.os7.biz/f/aa1e924b/
+
+　から、お問い合わせ下さい。
+
+
+■10万円以上のご予算にて
+　音源購入をご検討下さっている方は
+
+　【音源コンシェルジュについて】
+　https://ssdlfiles.s3.amazonaws.com/concierge.html
+
+　をご覧ください。
+
+　まとめての音源購入を希望される方は
+　こちらからお求めになるのが絶対にお得です。
+
+
+▼「音源をスマホから聴くことができるのか、
+　できるとすれば、どうやって？」
+
+　とお尋ね頂くことがありますが、
+　もちろん可能です。
+
+　具体的な方法については
+　（当方とは無関係の方の文章ですが）
+
+　https://goo.gl/VU5pGy
+
+　が分かりやすいと思いますので、
+　ご参考までに。
+
+------------------------
+
+【鮒谷周史の、
+（少人数・双方向制）年間プログラムについて】
+
+
+　以下よりお申込み、
+　あるいは、詳細の確認を願います。
+
+【＜オンライン受講版＞詳細＆参加申し込み】
+　https://form.os7.biz/f/d1aed965/
+
+【＜音源受講版＞詳細＆参加申し込み】
+　https://form.os7.biz/f/728f8021/
+
+　※参加下さっている方のご感想（ごく一部）
+　　雰囲気を体感いただけるかと思います
+　https://ssdlfiles.s3.amazonaws.com/180404_testimonials_nenkan.pdf
+
+　
+▼正式なお申込みの前に、鮒谷に
+　直接相談したい方は以下より申し込み願います。
+
+　＜年間プログラム「個別」相談会
+　　お申込みフォーム＞
+　https://form.os7.biz/f/b8b26ad4/
+
+------------------------
+
+【 鮒谷周史の、
+　 個別コンサルティングのご案内 】
+
+
+＜お申し込みはこちらから。
+※6回コースがお得でオススメ、ほとんどの方が
+　6回コースでお申込み下さっています＞
+
+https://form.os7.biz/f/6387a7fb/
+
+
+＜「個人のキャリア開発・独立起業」等の
+　コンサルについてのご感想＞
+https://ssdlfiles.s3.amazonaws.com/testimonials_consulting_career.pdf
+
+＜「企業経営・売上増進・利益拡大」等の
+　コンサルについてのご感想＞
+https://ssdlfiles.s3.amazonaws.com/testimonials_consulting_manager.pdf
+
+＜終日個別コンサル＞
+https://form.os7.biz/f/a418da3e/
+
+＜半日個別コンサル＞
+https://form.os7.biz/f/e887efc4/
+
+
+┏━━━━━━━━━━━━━━━
+┃【 広告掲載のお問い合わせ等 】
+┃--------------------------------
+┃■メルマガ「平成進化論」に
+┃　広告を出してみませんか？
+┃
+┃▼号外広告　　 400,000円（税抜）
+┃
+┃※詳しい資料をご希望の方は↓から
+┃　https://ssdlfiles.s3.amazonaws.com/advertisement/index.html
+┣ ━━━━━━━━━━━━━━━
+┃■発行者からのメッセージとお願い：
+┃　https://ssdlfiles.s3.amazonaws.com/message.html
+┣━━━━━━━━━━━━━━━
+┃発行者
+┃株式会社ことば未来研究所・有限会社セカンドステージ
+┃鮒谷周史
+┃問い合わせ先 ： https://form.os7.biz/f/aa1e924b/
+┃※広告等でご案内しているサービス・商品を
+┃　ご利用になってのトラブル等について、
+┃　当方では一切責任を負いかねます。
+┃※解除はこちらから https://form.os7.biz/f/a36e9c71/
+┃※特定商取引法に基づく表記 https://is.gd/6S1UfC
+┃Copyright(c) &#39;03-&#39;24
+┃2nd-stage &amp; Kotoba Mirai Laboratory Co.,Ltd.
+┃&amp; Shuji Funatani All rights reserved.
+┗━━━━━━━━━━━━━━━
+</code></pre><pre tabindex="0"><code></code></pre>
+    </article>
+
+    
+    <span class="f6 gray mv3" title="Lastmod:  December 20, 2024. Published at: 2024/12/20.">
+      
+    </span>
+
+    
+
+  </section>
+
+  <div class="xPrevNextLink">
+  
+  <div class="xPrevNextLink_prev">
+    <a href="https://ss-osanai.github.io/backnumber/raw/2024/12/241219_0135/">【進化論】あなたは絶望を与える側に立ちたいのか、与えられる側に立ちたいのか</a>
+  </div>
+  
+  
+</div>
+
+  <footer>
+  <div>
+    <p class="f6 gray mt6 lh-copy">
+      
+    </p>
+  </div>
+</footer>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+</body>
+
+</html>
