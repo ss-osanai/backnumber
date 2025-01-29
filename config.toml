@@ -11,18 +11,23 @@ hasCJKLanguage = true
 theme = "basic"
 
 [Permalinks]
-  post = "/:sections/:filename"
-  raw = "/:sections/:month/:filename"
+post = "/:sections/:filename"
+raw = "/:sections/:month/:filename"
+
+[outputs]
+home = ["HTML"]
 
 [params]
 [[params.menu]]
-  name = "post"
-  url = "post/"
+name = "post"
+url = "post/"
 [[params.menu]]
-  name = "raw"
-  url = "raw/"
+name = "raw"
+url = "raw/"
 [[params.menu]]
-  name = "search"
-  url = "search/"
+name = "search"
+url = "search/"
 
-
+[services]
+[services.googleAnalytics]
+id = 'G-MEASUREMENT_ID'
