@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html class="" lang="ja-jp" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+
+<head>
+  <meta charset="utf-8" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="【進化論】「抽象の世界に遊ぶ」と決めると、儲かる" />
+<meta property="og:site_name" content="バックナンバー" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://ss-osanai.github.io/backnumber/raw/2025/04/250428_0746/" />
+<meta property="og:locale" content="ja-jp" />
+<meta property="article:published_time" content="2025-04-28
+" /> <meta property="article:modified_time" content="2025-04-28
+" />
+
+
+
+
+
+
+  <title>【進化論】「抽象の世界に遊ぶ」と決めると、儲かる</title>
+  <link rel="canonical" href="https://ss-osanai.github.io/backnumber/raw/2025/04/250428_0746/" />
+  
+  
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css" />
+
+<link rel="stylesheet" href="https://ss-osanai.github.io/backnumber/css/style.css" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css" />
+
+<link rel="stylesheet" href="https://ss-osanai.github.io/backnumber/css/print.css" media="print" />
+<link rel="stylesheet" href="https://ss-osanai.github.io/backnumber/css/custom.css" />
+
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-MEASUREMENT_ID');
+        }
+      </script>
+  <link rel="shortcut icon" href="https://ss-osanai.github.io/backnumber/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="https://ss-osanai.github.io/backnumber/apple-touch-icon.png" />
+</head>
+
+<body lang="ja-jp" class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns" itemscope
+  itemtype="http://schema.org/Article">
+
+  <a href="https://ss-osanai.github.io/backnumber/raw" class="b bb bw1 pb1 no-underline black">一覧</a>
+
+  <span class="b"> | </span>
+  <a href="https://ss-osanai.github.io/backnumber/search" class="b bb bw1 pb1 no-underline black">search</a>
+
+  <div class="xPrevNextLink">
+  
+  <div class="xPrevNextLink_prev">
+    <a href="https://ss-osanai.github.io/backnumber/raw/2025/04/250427_0437/">【進化論】ビジネスと言語操作能力が、切っても切り離せぬ理由</a>
+  </div>
+  
+  
+</div>
+
+  <br>
+<div id="font-controller">
+  <label for="fontSizeInput">フォントサイズ:</label>
+  <input type="number" id="fontSizeInput" value="15.0" min="1.0" style="width: 80px;" />
+  <button id="increaseFontSize">+</button>
+  <button id="decreaseFontSize">-</button>
+
+  <br>
+
+  <label for="fontWeightSelect">フォントウェイト:</label>
+  <select id="fontWeightSelect">
+    <option value="bold">Bold</option>
+    <option value="normal">Normal</option>
+  </select>
+
+  <br>
+
+  <label for="fontFamilySelect">フォントファミリー:</label>
+  <select id="fontFamilySelect">
+    <option value="'UDEV Gothic JPDOC', sans-serif">5: 'UDEV Gothic JPDOC', sans-serif</option>
+    <option value="'MS Gothic', sans-serif">1: 'MS Gothic', sans-serif</option>
+    <option value="'Noto Sans JP', sans-serif">2: 'Noto Sans JP', sans-serif</option>
+    <option value="'M PLUS 1 Code', sans-serif">3: 'M PLUS 1 Code', sans-serif</option>
+    <option value="'M PLUS 1 Code', monospace">4: 'M PLUS 1 Code', monospace</option>
+  </select>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const content = document.querySelector('#content pre code');
+      const fontSizeInput = document.getElementById('fontSizeInput');
+      const increaseFontSize = document.getElementById('increaseFontSize');
+      const decreaseFontSize = document.getElementById('decreaseFontSize');
+      const fontWeightSelect = document.getElementById('fontWeightSelect');
+
+      
+      function updateFontSize() {
+        content.style.fontSize = fontSizeInput.value + 'px';
+      }
+
+      increaseFontSize.addEventListener('click', function () {
+        fontSizeInput.value = parseFloat(fontSizeInput.value) + 1.0;
+        updateFontSize();
+      });
+
+      decreaseFontSize.addEventListener('click', function () {
+        fontSizeInput.value = parseFloat(fontSizeInput.value) - 1.0;
+        updateFontSize();
+      });
+
+      fontSizeInput.addEventListener('change', updateFontSize);
+
+      
+      fontWeightSelect.addEventListener('change', function () {
+        content.style.fontWeight = this.value;
+      });
+
+      
+      const fontFamilySelect = document.getElementById('fontFamilySelect');
+      fontFamilySelect.addEventListener('change', function () {
+        content.style.fontFamily = this.value;
+      });
+
+    });
+  </script>
+
+</div>
+
+  <br>
+<div id="copy-button">
+  <button id="copy">タイトル + 本文コピー</button>
+
+  <script>
+    document.getElementById('copy').addEventListener('click', function () {
+      const title = document.querySelector('title').textContent;
+      const content = document.querySelector('#content pre code').textContent;
+      const text = title + '\n\n' + content;
+      navigator.clipboard.writeText(text).then(function () {
+        alert('コピーしました');
+      });
+    });
+  </script>
+
+</div>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">【進化論】「抽象の世界に遊ぶ」と決めると、儲かる</h1>
+    <span class="f6 gray">2025/04/28 07:46</span>
+
+    <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+      <pre tabindex="0"><code>■まぐまぐ大賞受賞＆殿堂入りの当メルマガを
+　友人やご家族に紹介するにはこちらから
+⇒ https://1lejend.com/stepmail/kd.php?no=JqOIRnMsgbw
+━━━━━━━━━━━━━━━━━━━
+令和7年4月27日 平成進化論
+（7868日（21年間）連続配信、累計9234号）
+
+■「抽象の世界に遊ぶ」と決めると、
+　儲かる
+
+　有限会社セカンドステージ代表取締役
+
+　　　　　鮒谷周史（ふなたにしゅうじ）
+
+━━━━━━━━━━━━━━━━━━━
+
+
+■おはようございます、鮒谷です。
+
+
+　引き続き、新規プロジェクトに注力中。
+　完全に第二創業。
+
+
+━━━━━━━━━━━━━━━━━━━
+＜今日のピークパフォーマンス方程式＞
+
+■「抽象の世界に遊ぶ」と決めると、
+　儲かる
+
+───────────────────
+
+
+
+■最近のメモから。ご査収ください。
+
+
+　（ここから）
+　-------------
+
+　感情のマネジメントを失敗すると、
+　取り返しがつかなくなることがある。
+
+　特に危ないのが怒り、焦り、嫉妬。
+
+
+　脳をクールダウンさせ、
+　悲劇を回避するためには、
+　情動を書き出す習慣を持つとよい。
+
+　適切に書かれる日記は
+　「思考と感情の分離」
+
+　を可能にする。
+
+　感情の波に翻弄される危険から、
+　身を守れる。
+
+　-------------
+
+　今の時代、情報が多すぎて、
+　考えをまとめる暇もない。
+
+　結論の出ない問いをたくさん抱え、
+　脳は疲弊し、時間を浪費する。
+
+
+　それが嫌なら、思索を必ずテキストに
+　出力する習慣を身につけるといい。
+
+　思考の言語化は「漠然とした不安」を、
+　「整理された課題」に転換し、
+　脳のメモリを開放してくれる。
+
+　-------------
+
+　行動に移す前に、
+
+・その影響は時間が経っても
+　プラス方向に効くか、複利で回るか
+
+・複数のタスクを重ね合わせられないか
+　
+　について考えるといい。
+
+
+　たとえばメルマガは、
+　発信時に生まれる価値（認知獲得）と、
+
+　その後の価値（ストックされるコンテンツ）
+　という意味において、前者に適合する。
+
+
+　あるいは私は定期的に、
+
+　１、初めての場所を訪れる
+　２、かなりの早足で散歩する
+　３、ハンズフリーで親に電話する
+
+　を「同時に」実行している。
+
+　特に母親は電話が長いので
+　（平気で30分とか1時間、話し続ける、、）、
+
+　そのためだけに時間を天引きするのは、
+　さすがに厳しい。
+
+
+　なので、ふだん行かないエリアに足を運び、
+　見聞を広げつつ、早歩きで有酸素運動をし、
+　さらに長電話で親孝行するという、
+
+　一石三鳥を心がけている（これは一例）。
+
+　
+　上記２つを日常的に心がけていると、
+　徐々に人生が逓増傾向になってくる
+　（揚力が発生する）。
+
+　-------------
+
+　不注意からの生傷が絶えず、身体中、
+　怪我のあとだらけ（ADHDあるある）。
+
+　いつか大事故に巻き込まれて死んでまう、
+　と思ったのがシステム化のきっかけ。
+
+
+　ADHDで培われた注意深さが、まさか
+　ビジネスや資産運用に転用されて役立つなんて、
+　昔は全く思わなかった。
+
+　災い転じて福となす、とはこのこと。
+
+　-------------
+
+　私は重度ADHDなので、指差し確認とか
+　備忘メモ、リマインダー設定、
+　徹底した外注化など、
+
+　あらゆることをルール化し、
+　習慣と仕組みに落とすことで、
+
+　なんとかギリギリ、
+　社会生活を営めるようになった。
+
+
+　安全に生きていく上で、
+　守るべきルールを作っておくといい。
+
+　特に発達障害ある人は。
+
+　-------------
+
+　「ヤバい」「エグい」が
+　口グセになってる人いるけど、
+　意識して異なる言葉に言い換えるべき。
+
+　取れる意味が広すぎて、
+　思考が雑になる。
+
+
+　というか、広く取れるから、
+　思考の省略をしたい人が飛びつき、
+　みんな使うようになっただけ。
+
+　この言葉を封印するだけで、
+　思考と言動をとがらせられる。
+
+　-------------
+
+　日記を続けると、
+
+　「似たような思考パターン」
+
+　の記録が蓄積されていく。
+
+　すると、
+
+　「このパターンで問題ないか/
+　　より良いパターンはないか」
+
+　と問いが深まり、
+　モデルの更新を促される。
+
+
+　この反復が、
+　メンタルモデルの自己診断に繋がり、
+　自己刷新の契機となる。
+
+　-------------
+
+　あなたが何者であり、
+　何を求め、何を恐れているか。
+
+　その答えは、外にない。
+
+　書いて、書いて、書きまくった果てに、
+　浮かび上がる、あるいは、回帰する場所にある。
+
+　それがあなたの姿。
+
+　-------------
+
+　人間は社会的動物であり、
+　他者からの承認を求める生き物。
+
+　しかし、承認を内在化すれば、
+　他者を必要とせず、安定的な自己認識
+　（心の平穏）を得られるようになる。
+
+
+　その最強の支援ツールが日記。
+
+　日記は積み上げてきた、
+
+　「自分だけが知っている営為」
+
+　に意味を与える記録であり、
+　証拠であり、物語。
+
+　-------------
+
+　勤務先や年収、保有資格や親の太さを、
+　精神的拠り所にしている人は危ない。
+
+　それらが失われた瞬間、
+　自尊心が崩壊するから。
+
+
+　何もないけど自信はある。
+
+　そんな「駆動するエンジン」に
+　高級車体を乗せるのはいいけど、
+
+　壊れたエンジンの上に乗せた、
+　立派なボディを誇られてもな、ということ。
+
+　-------------
+
+　日記を書くと、肩書や資格、世間の評価に
+　依存しなくて済むようになる。
+
+　たとえ他の人が分からなくても、
+　自分は
+
+　（一人で深く、
+　　掘り進めてきたという意味において）
+
+　凄くて、偉いことを、
+　自分が一番良く知っているから。
+
+
+　他者から承認を得られなくても、
+　自己承認だけで満たされるから、危うげがない。
+
+　承認欲求のために、派手な顕示的消費を
+　行なって無駄金を使うことも、
+
+　無理やり散財することで、幸せだと
+　思い込もうとする愚行もなくなる。
+
+
+　日記を書いているうちに、
+　質素な生活でじゅうぶん満足できようになる。
+
+　金も貯まる笑
+
+　-------------
+
+　メンタルモデル
+　（人が無自覚に持つ、解釈や価値観の枠組み）が
+　アップデートされると何が変わるのか。
+
+
+1. 視野が広がる
+　（複数視点を持てるように）
+
+2. 意思決定の精度が上がる
+　（より現実に即したモデル選択）
+
+3. 適応力が強化される
+　（状況変化に柔軟に対応）
+
+4. 思考の再現性が高まる
+　（自分独自の思考の型を確立）
+
+5. 人間関係が円滑になる
+　（他者のメンタルモデルを把握し、チューニング）
+
+
+　日記は「思考の鏡」だから、
+　自己のメンタルモデルがそのまま反映される。
+
+　思考のパターンを書き出し、外部化し、
+　見える化できるようにすると、
+　モデルに揺さぶりをかけられるようになる。
+
+
+　こうして更新を進めるほどに、思考の自由度が
+　増し、生きやすくなっていく。
+
+　これが、私が日記をやめられない
+　理由の一つ。
+
+　-------------
+
+　【メンタルモデルの
+　　アップデート（日記活用）の機序】
+
+１、矛盾の発見 → 前提の問い直し
+
+　　過去の記録と現在の考えの違いを比較し、
+　　内面の矛盾や葛藤を発見。
+　「何が正しいのか」を問い直すきっかけ。
+
+２、新たな仮説の形成 → 試行
+　
+　「もし、こう考えたら違う結果が
+　　得られるかもしれない」。
+　　日記はこの仮説を言語化し、
+　　行動に移す土台になる。
+
+３、行動結果の記録 → 修正・強化
+
+　　新しい行動を試した結果を日記に記録し、
+　　効果を検証。
+
+　　うまくいけば新モデルとして採用、
+　　失敗なら再調整。
+
+
+　これが、日記を書くと、メンタルモデルが
+　動的に進化するメカニズム。
+
+　振り返りを重ねる人は、
+　かくして再帰的な成長を遂げ続ける。
+
+　-------------
+
+　今さらだけど、すごい。
+
+　過去30年のうち、デジタル化してる
+　23年間の日記（数千万文字）から、
+
+　「名言」「語録」を抜き出せるか、
+　AIに聞いたら可能だと。
+
+
+　こんな日が来るとは思わなかった。
+
+　これ以外にも12年分、1200時間以上の
+　音声データが手付かずで残っている。
+
+　-------------
+
+　どんな人にも「思考のクセ」がある。
+
+　しかし普段、自分が
+
+　「なぜそう考えたのか」
+　「なぜそう行動したのか」
+
+　は、意識されにくい。そこで日記。
+
+
+　出来事やその時の思考・感情を書き出せば、
+　無意識の判断パターン、信念、前提が
+　浮かび上がる。
+
+　見える化されるから、
+　アップデートが容易になる。
+
+　-------------
+
+　「世界はこういうところ」
+　「人はこんな風に動く」
+　「自分はこんな人間」
+
+　と、無意識に前提としている
+　思考の枠組みがある。
+
+　これをメンタルモデルという。
+
+
+　意思決定や問題解決、
+　対人関係などのすべてにおいて、
+
+　この枠組みが行動を方向づけるが、
+　不幸に好かれる人は、
+　メンタルモデルに難のあることが多い。
+
+　-------------
+
+　人生は、居場所探しの旅。
+
+　無数の人がいる場所で、強みや価値観、
+　居心地の良さが重なり合う、
+
+　ごくごく狭いエリア（点？）を探し当てる、
+　そんなゲーム。
+
+
+　知力、行動力、根気強さ、仲間など、
+　持てるリソースを組み合わせてクリアを目指す、
+　楽しいパズルみたいなものと思えばいい。
+
+　-------------
+
+　「これくらいはやってて当たり前
+　　（やらんと、まずいよね）」
+
+　の基準の高低がすべて。
+
+　月１冊の読書で「勉強した」と
+　満足してる人と、
+
+　20冊読んで時間が足りんと嘆いている
+　人の差は、端的に言って基準の差。
+
+　人生を決するのはこれだけ。
+
+　
+　だから出会いが大事。
+
+　私（鮒谷）は長年、
+　師匠に付き従ううち、
+　高い基準が無意識にインストールされた。
+
+　自分にとっての当たり前を、
+　当たり前のようにやってたら、
+
+　いつの間にか同世代の平均値から
+　大きく抜けていた。
+　
+　-------------
+
+　「抽象の世界に遊ぶ」と決めると、儲かる。
+
+　具体・個別の殻に閉じこもっているから、
+　部分最適化はできても全体最適に意識が向かず、
+　流れにも乗れない。
+
+　真面目に仕事せず、
+　ブラブラしてるほうが、かえって儲かる。
+
+
+　ブラブラしてるうちに
+　構造的空隙が見つかり、
+
+　「ここだ！」と思ったら、
+　その時だけ真面目に働けばいい。
+
+　
+　その後は、作った仕組みからの上がりで
+　生活する「金利生活者」に戻り、
+
+　再びブラブラすることとなる
+　（以下、繰り返し）。
+
+　-------------
+　（ここまで）
+
+
+　今日も人生とビジネスを
+　楽しみましょう。
+
+
+───────────────
+
+【当社よりご案内している各種音源について】
+
+　https://ssdlfiles.s3.amazonaws.com/list_ongen.pdf
+
+　より、ご確認下さいませ。
+
+
+▼音源ダウンロード等でのご不明な点、トラブル、
+　その他どんなことでも、どうぞご遠慮なく
+
+　https://form.os7.biz/f/aa1e924b/
+
+　から、お問い合わせ下さい。
+
+
+■10万円以上のご予算にて
+　音源購入をご検討下さっている方は
+
+　【音源コンシェルジュについて】
+　https://ssdlfiles.s3.amazonaws.com/concierge.html
+
+　をご覧ください。
+
+　まとめての音源購入を希望される方は
+　こちらからお求めになるのが絶対にお得です。
+
+
+▼「音源をスマホから聴くことができるのか、
+　できるとすれば、どうやって？」
+
+　とお尋ね頂くことがありますが、
+　もちろん可能です。
+
+　具体的な方法については
+　（当方とは無関係の方の文章ですが）
+
+　https://goo.gl/VU5pGy
+
+　が分かりやすいと思いますので、
+　ご参考までに。
+
+------------------------
+
+【鮒谷周史の、
+（少人数・双方向制）年間プログラムについて】
+
+
+　以下よりお申込み、
+　あるいは、詳細の確認を願います。
+
+【＜オンライン受講版＞詳細＆参加申し込み】
+　https://form.os7.biz/f/d1aed965/
+
+【＜音源受講版＞詳細＆参加申し込み】
+　https://form.os7.biz/f/728f8021/
+
+　※参加下さっている方のご感想（ごく一部）
+　　雰囲気を体感いただけるかと思います
+　https://ssdlfiles.s3.amazonaws.com/180404_testimonials_nenkan.pdf
+
+　
+▼正式なお申込みの前に、鮒谷に
+　直接相談したい方は以下より申し込み願います。
+
+　＜年間プログラム「個別」相談会
+　　お申込みフォーム＞
+　https://form.os7.biz/f/b8b26ad4/
+
+------------------------
+
+【 鮒谷周史の、
+　 個別コンサルティングのご案内 】
+
+
+＜お申し込みはこちらから。
+※6回コースがお得でオススメ、ほとんどの方が
+　6回コースでお申込み下さっています＞
+
+https://form.os7.biz/f/6387a7fb/
+
+
+＜「個人のキャリア開発・独立起業」等の
+　コンサルについてのご感想＞
+https://ssdlfiles.s3.amazonaws.com/testimonials_consulting_career.pdf
+
+＜「企業経営・売上増進・利益拡大」等の
+　コンサルについてのご感想＞
+https://ssdlfiles.s3.amazonaws.com/testimonials_consulting_manager.pdf
+
+＜終日個別コンサル＞
+https://form.os7.biz/f/a418da3e/
+
+＜半日個別コンサル＞
+https://form.os7.biz/f/e887efc4/
+
+
+┏━━━━━━━━━━━━━━━
+┃【 広告掲載のお問い合わせ等 】
+┃--------------------------------
+┃■メルマガ「平成進化論」に
+┃　広告を出してみませんか？
+┃
+┃▼号外広告　　 400,000円（税抜）
+┃
+┃※詳しい資料をご希望の方は↓から
+┃　https://ssdlfiles.s3.amazonaws.com/advertisement/index.html
+┣ ━━━━━━━━━━━━━━━
+┃■発行者からのメッセージとお願い：
+┃　https://ssdlfiles.s3.amazonaws.com/message.html
+┣━━━━━━━━━━━━━━━
+┃発行者
+┃株式会社ことば未来研究所・有限会社セカンドステージ
+┃鮒谷周史
+┃問い合わせ先 ： https://form.os7.biz/f/aa1e924b/
+┃※広告等でご案内しているサービス・商品を
+┃　ご利用になってのトラブル等について、
+┃　当方では一切責任を負いかねます。
+┃※解除はこちらから https://form.os7.biz/f/a36e9c71/
+┃※特定商取引法に基づく表記 https://is.gd/6S1UfC
+┃Copyright(c) &#39;03-&#39;25
+┃2nd-stage &amp; Kotoba Mirai Laboratory Co.,Ltd.
+┃&amp; Shuji Funatani All rights reserved.
+┗━━━━━━━━━━━━━━━
+</code></pre><pre tabindex="0"><code></code></pre>
+    </article>
+
+    
+    <span class="f6 gray mv3" title="Lastmod:  April 28, 2025. Published at: 2025/04/28.">
+      
+    </span>
+
+    
+
+  </section>
+
+  <div class="xPrevNextLink">
+  
+  <div class="xPrevNextLink_prev">
+    <a href="https://ss-osanai.github.io/backnumber/raw/2025/04/250427_0437/">【進化論】ビジネスと言語操作能力が、切っても切り離せぬ理由</a>
+  </div>
+  
+  
+</div>
+
+  <a href="https://ss-osanai.github.io/backnumber/raw" class="b bb bw1 pb1 no-underline black">一覧</a>
+  <span class="b"> | </span>
+  <a href="https://ss-osanai.github.io/backnumber/search" class="b bb bw1 pb1 no-underline black">search</a>
+
+  <footer>
+  <div>
+    <p class="f6 gray mt6 lh-copy">
+      
+    </p>
+  </div>
+</footer>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+</body>
+
+</html>
