@@ -13,7 +13,7 @@ theme = "basic"
 [Permalinks]
 post = "/:sections/:filename"
 raw = "/:sections/:month/:filename"
-x = "/:sections/posts"
+x = "/:sections/:filename"
 
 [outputs]
 home = ["HTML"]
