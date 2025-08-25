@@ -1,0 +1,19 @@
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+  <span class="b">/ </span>
+  <a href="{{ .Site.BaseURL }}" class="b bb bw1 pb1 no-underline black">
+    {{ .Site.Title }}
+  </a>
+
+  {{/* 直近のセクションを取得（1階層上のみ） */}}
+  {{ with index .Ancestors 0 }}
+  <span class="b">/</span>
+  <a href="{{ .RelPermalink }}" class="b bb bw1 pb1 no-underline black">
+    {{ .Title }}
+  </a>
+  {{ end }}
+
+  {{ if .IsPage }}
+  <span class="b">/</span>
+  <span>{{ .Title }}</span>
+  {{ end }}
+</nav>
