@@ -1,0 +1,47 @@
+{{ partial "header.html" . }}
+
+<body lang="{{ .Site.LanguageCode }}" class="sans-serif w-90 w-60-ns center center-ns mv2 mv5-ns">
+
+  {{ partial "menu-links.html" . }}
+
+  <section id="main" class="mt5">
+    <div>
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+
+      {{ if eq .Kind "section" }}
+      {{ if .Sections }}
+      <h2>年ごとの記事</h2>
+      <ul id="sections" class="pl0">
+        {{ range .Sections.ByTitle }}
+        <li class="list pl0 lh-copy">
+          <a class="f3 b dib black no-underline" href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <span class="f6 gray db dib-ns">{{ len .Pages }} 記事</span>
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+      {{ end }}
+
+      {{ if .RegularPages }}
+      <h2>{{ .Title }}一覧</h2>
+      <ul id="list" class="pl0">
+        {{ range .RegularPages.ByWeight }}
+        <li class="list pl0 lh-copy">
+          <a class="f3 b dib black no-underline" href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <span class="f6 gray db dib-ns">
+            {{ .Date.Format "2006/01/02" }}
+            {{ if .Params.weight }} - Weight: {{ .Params.weight }}{{ end }}
+          </span>
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+
+    </div>
+  </section>
+
+  {{ partial "footer.html" . }}
+</body>
+
+</html>

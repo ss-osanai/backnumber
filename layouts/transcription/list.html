@@ -1,0 +1,30 @@
+{{ partial "header.html" . }}
+
+<body lang="{{ .Site.LanguageCode }}" class="sans-serif w-90 w-60-ns center center-ns mv2 mv5-ns">
+
+  {{ partial "menu-links.html" . }}
+
+  <section id="main" class="mt5">
+    <div>
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+
+      {{ if .Sections }}
+      <h2>カテゴリ</h2>
+      <ul id="categories" class="pl0">
+        {{ range .Sections.ByTitle }}
+        <li class="list pl0 lh-copy">
+          <a class="f3 b dib black no-underline" href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <span class="f6 gray db dib-ns">{{ len .Pages }} 記事</span>
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+
+    </div>
+  </section>
+
+  {{ partial "footer.html" . }}
+</body>
+
+</html>
