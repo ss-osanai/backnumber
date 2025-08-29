@@ -1,0 +1,16 @@
+<br>
+<div id="copy-button">
+  <button id="copy">記事テキストをクリップボードにコピー</button>
+
+  <script>
+    document.getElementById('copy').addEventListener('click', function () {
+      const title = document.querySelector('#title').textContent;
+      const content = document.querySelector('#content').textContent;
+      const text = title + '\n\n' + content;
+      navigator.clipboard.writeText(text).then(function () {
+        alert('コピーしました');
+      });
+    });
+  </script>
+
+</div>
