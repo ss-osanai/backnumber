@@ -83,6 +83,23 @@
 <span class="b"> | </span>
 <a href="https://ss-osanai.github.io/backnumber/transcription" class="b bb bw1 pb1 no-underline black">文字起こし</a>
 
+  <br>
+<div id="copy-button">
+  <button id="copy">記事テキストをクリップボードにコピー</button>
+
+  <script>
+    document.getElementById('copy').addEventListener('click', function () {
+      const title = document.querySelector('#title').textContent;
+      const content = document.querySelector('#content').textContent;
+      const text = title + '\n\n' + content;
+      navigator.clipboard.writeText(text).then(function () {
+        alert('コピーしました');
+      });
+    });
+  </script>
+
+</div>
+
   <section id="main" class="mt5">
     <h1 itemprop="name" id="title">年間プログラムショートセミナー 8月21日開催分</h1>
 
