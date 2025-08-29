@@ -2,7 +2,7 @@
 <br>
 <div id="copy-button">
   <button id="copy">タイトル + 本文コピー</button>
-  <button id="download">タイトル + 本文ダウンロード</button>
+  <button id="download">テキストとしてダウンロード</button>
 
   <script>
     document.getElementById('copy').addEventListener('click', function () {
@@ -18,23 +18,23 @@
       const title = document.querySelector('#title').textContent;
       const content = document.querySelector('#content').textContent;
       const text = title + '\n\n' + content;
-      
+
       // ファイル名を記事タイトルから生成（特殊文字を除去）
       const filename = title.replace(/[<>:"/\\|?*]/g, '').trim() + '.txt';
-      
+
       // Blobオブジェクトを作成
       const blob = new Blob([text], { type: 'text/plain' });
-      
+
       // ダウンロードリンクを作成
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
       link.download = filename;
-      
+
       // リンクをクリックしてダウンロード開始
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      
+
       // メモリ解放
       URL.revokeObjectURL(link.href);
     });
