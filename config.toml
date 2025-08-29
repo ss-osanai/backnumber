@@ -32,6 +32,9 @@ url = "search/"
 [[params.menu]]
 name = "x"
 url = "x/"
+[[params.menu]]
+name = "文字起こし"
+url = "transcription/"
 
 [services]
 [services.googleAnalytics]
