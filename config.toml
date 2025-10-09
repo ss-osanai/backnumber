@@ -13,6 +13,7 @@ theme = "basic"
 [Permalinks]
 post = "/:sections/:filename"
 raw = "/:sections/:month/:filename"
+note = "/:sections/:month/:filename"
 x = "/:sections/:filename"
 transcription = "/:sections/:filename"
 
@@ -29,12 +30,21 @@ url = "raw/"
 [[params.menu]]
 name = "search"
 url = "search/"
+
 [[params.menu]]
-name = "x"
-url = "x/"
+name = "X"
+url = "x/posts"
+[[params.menu]]
+name = "X ハイライト"
+url = "x/highlight_posts"
+
 [[params.menu]]
 name = "文字起こし"
 url = "transcription/"
+
+[[params.menu]]
+name = "note"
+url = "note/"
 
 [services]
 [services.googleAnalytics]
