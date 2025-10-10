@@ -32,5 +32,4 @@ draft: false
 
 せっかくの学びも行動に反映されていなければ、宝の持ち腐れ。
 
-> **【Xではnoteで書ききれない話を毎日発信中。継続して読みたい方は今すぐ以下よりフォローを↓】
-> ** [https://x.com/shinkaron](https://x.com/shinkaron)
+> **【Xではnoteで書ききれない話を毎日発信中。継続して読みたい方は今すぐ以下よりフォローを↓】** [https://x.com/shinkaron](https://x.com/shinkaron)
