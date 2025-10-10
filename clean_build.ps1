@@ -1,1 +1,1 @@
-hugo --cleanDestinationDir
+hugo --cleanDestinationDir --logLevel debug
