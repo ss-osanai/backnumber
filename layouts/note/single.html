@@ -9,7 +9,7 @@
 
   {{ partial "font-controller" . }}
 
-  {{ partial "copy-button" . }}
+  {{ partial "transcription-copy-button.html" . }}
 
   <section id="main" class="mt5">
     <h1 itemprop="name" id="title">{{ .Title }}</h1>
@@ -57,9 +57,9 @@
 
   {{ partial "prev-next" . }}
 
-  <a href="/note" class="b bb bw1 pb1 no-underline black">一覧</a>
+  <a href="/note" class="b bb bw1 pb1 no-underline black">note一覧</a>
   <span class="b"> | </span>
-  <a href="/search" class="b bb bw1 pb1 no-underline black">search</a>
+  <a href="/note_search" class="b bb bw1 pb1 no-underline black">note検索</a>
 
   {{ partial "footer.html" . }}
 </body>
