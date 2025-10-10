@@ -11,11 +11,11 @@ hasCJKLanguage = true
 theme = "basic"
 
 [Permalinks]
-post = "/:sections/:filename"
-raw = "/:sections/:month/:filename"
-note = "/:sections/:month/:filename"
-x = "/:sections/:filename"
-transcription = "/:sections/:filename"
+post = "/:sections/:contentbasename"
+raw = "/:sections/:month/:contentbasename"
+note = "/:sections/:month/:contentbasename"
+x = "/:sections/:contentbasename"
+transcription = "/:sections/:contentbasename"
 
 [outputs]
 home = ["HTML"]
@@ -49,3 +49,6 @@ url = "note/"
 [services]
 [services.googleAnalytics]
 id = 'G-MEASUREMENT_ID'
+
+[markup.goldmark.renderer]
+unsafe = true
