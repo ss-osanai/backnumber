@@ -1,0 +1,22 @@
+{{/* エスケープ処理（改行を空白化、前後の空白削除、連続する空白を集約） */}}
+{{- define "escape" }}
+{{- trim (replace . "\n" " ") " " | replaceRE " +" " " | jsonify -}}
+{{- end -}}
+
+{{/* cf) 2025 */}}
+{{- $year := .File.BaseFileName -}}
+
+var {{ printf "note_entries_%s" $year }} = [
+{{- range where .Site.RegularPages "Section" "note" }}
+
+{{- if (eq (substr .File.Dir 5 4) $year) }}
+{
+url: {{ .Permalink | jsonify }},
+title: {{ .Title | jsonify }},
+date: {{ .Date | jsonify }},
+body: {{ template "escape" (printf "%s %s" .Title .Plain) }}
+},
+{{ end -}}
+
+{{ end -}}
+];

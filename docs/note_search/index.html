@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head><script src="/backnumber/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=backnumber/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <title>Note Search | バックナンバー</title>
+  <style>
+    body {
+      background: #fafafa;
+    }
+
+    input {
+      color: deeppink;
+      font-size: 1.2em;
+      font-weight: bolder;
+    }
+
+    input::-webkit-input-placeholder {
+      color: pink;
+    }
+
+    #result {
+      margin: 1em;
+    }
+
+    .item_title {
+      text-decoration: none;
+      color: #36f;
+      font-weight: bolder;
+    }
+
+    .item_excerpt {
+      background: white;
+      margin: 0.5em 2em 1em;
+      padding: 0.5em;
+      border: dashed 1px lightgray;
+      font-size: smaller;
+    }
+
+    .item_excerpt b {
+      background: pink;
+    }
+  </style>
+</head>
+
+<body class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns">
+
+  
+<span class="b"> | </span>
+<a href="http://localhost:1313/backnumber/raw/" class="b bb bw1 pb1 no-underline black">メルマガ</a>
+
+<span class="b"> | </span>
+<a href="http://localhost:1313/backnumber/search/" class="b bb bw1 pb1 no-underline black">メルマガ検索</a>
+
+<span class="b"> | </span>
+<a href="http://localhost:1313/backnumber/x/posts" class="b bb bw1 pb1 no-underline black">X</a>
+
+<span class="b"> | </span>
+<a href="http://localhost:1313/backnumber/x/highlight_posts" class="b bb bw1 pb1 no-underline black">X ハイライト</a>
+
+<span class="b"> | </span>
+<a href="http://localhost:1313/backnumber/transcription/" class="b bb bw1 pb1 no-underline black">文字起こし</a>
+
+<span class="b"> | </span>
+<a href="http://localhost:1313/backnumber/note/" class="b bb bw1 pb1 no-underline black">note</a>
+
+<span class="b"> | </span>
+<a href="http://localhost:1313/backnumber/note_search/" class="b bb bw1 pb1 no-underline black">note検索</a>
+
+
+  <h1>Note Search</h1>
+  <p>半角スペース区切りで複数ワード検索ができます。（例： 抽象度 理解）</p>
+  <div id="latest"></div>
+
+  <input id="query" onkeyup="location.replace('#' + this.value)" size="20" autocomplete="off" autofocus
+    placeholder="検索ワード" />
+  <span id="inputWord"></span>
+  <span id="resultCount"></span>
+
+  <div id="result"></div>
+
+  <script src="2025.js"></script>
+  <script src="../js/maku_note_search.js"></script>
+
+</body>
+
+</html>

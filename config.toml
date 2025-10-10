@@ -21,14 +21,15 @@ transcription = "/:sections/:contentbasename"
 home = ["HTML"]
 
 [params]
+# [[params.menu]]
+# name = "post"
+# url = "post/"
+
 [[params.menu]]
-name = "post"
-url = "post/"
-[[params.menu]]
-name = "raw"
+name = "メルマガ"
 url = "raw/"
 [[params.menu]]
-name = "search"
+name = "メルマガ検索"
 url = "search/"
 
 [[params.menu]]
@@ -45,6 +46,10 @@ url = "transcription/"
 [[params.menu]]
 name = "note"
 url = "note/"
+
+[[params.menu]]
+name = "note検索"
+url = "note_search/"
 
 [services]
 [services.googleAnalytics]
