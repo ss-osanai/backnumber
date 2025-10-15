@@ -18,6 +18,14 @@ draft: false
 
 
 
+[関連記事](https://note.com/shinkaron/n/n357a0867371f)
+
+
+
+[関連記事](https://note.com/shinkaron/n/n94b6042aaff0)
+
+
+
 **抽象的な原則を具体化し、ふたたび抽象度を引き上げて見直す。絶えざる両者の往復運動によって基準は磨かれ、進化し続ける。**
 
 

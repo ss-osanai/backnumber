@@ -6,6 +6,10 @@ draft: false
 
 昔、友人の[TORiX株式会社 代表取締役の高橋浩一](https://www.torix-corp.com/profile/)さんから、 **『100歳のことば100選』（日野原重明 著・編集）** という本を紹介してもらったことがある。
 
+
+
+[100歳のことば100選 (PHP文庫)](https://www.amazon.co.jp/100%E6%AD%B3%E3%81%AE%E3%81%93%E3%81%A8%E3%81%B0100%E9%81%B8-PHP%E6%96%87%E5%BA%AB-%E6%97%A5%E9%87%8E%E5%8E%9F-%E9%87%8D%E6%98%8E/dp/4569677320/ref=rvi_d_sccl_2/356-8128294-3243912?pd_rd_w=1rWsO&content-id=amzn1.sym.a4dc92d7-7100-437e-b3e3-2349e8298523&pf_rd_p=a4dc92d7-7100-437e-b3e3-2349e8298523&pf_rd_r=ZWHH317MMNMNFP39KW24&pd_rd_wg=y1UNb&pd_rd_r=1ce556f2-90ce-4cd5-bd4b-20b469a9708f&pd_rd_i=4569677320&psc=1)
+
 この書物は、 **80歳代、90歳代、さらには100歳代と、相当のご高齢になってなお活躍を続けてこられた方々の言葉** を引用・整理したもの。
 
 

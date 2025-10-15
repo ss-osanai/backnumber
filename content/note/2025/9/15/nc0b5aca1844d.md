@@ -6,6 +6,10 @@ draft: false
 
 先に投稿した
 
+
+
+[関連記事](https://note.com/shinkaron/n/n8a7c08902a1f)
+
 の内容を別の角度から補足。
 
 
