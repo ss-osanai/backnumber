@@ -35,6 +35,8 @@ function splitInput(input) {
 }
 
 let oldInput = null;
+// IME イベント（二重登録防止）
+let imeListenersRegistered = false;
 
 /**
  * 検索クエリが変更されているか
@@ -322,12 +324,16 @@ function searchWithHash() {
   }
 
   const queryElem = document.querySelector('input#query');
-  queryElem.addEventListener('compositionstart', () => {
-    compositionFlag = true;
-  });
-  queryElem.addEventListener('compositionend', () => {
-    compositionFlag = false;
-  });
+  // IMEイベントは一度だけ登録
+  if (!imeListenersRegistered && queryElem) {
+    queryElem.addEventListener('compositionstart', () => {
+      compositionFlag = true;
+    });
+    queryElem.addEventListener('compositionend', () => {
+      compositionFlag = false;
+    });
+    imeListenersRegistered = true;
+  }
 
   if (compositionFlag) {
     return;
