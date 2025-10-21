@@ -1,0 +1,91 @@
+// キーワードのデリミタは半角スペースとする
+const delim = ' ';
+
+// 全てのエントリを入れる配列
+let allEntries = [];
+
+// 各セクションごとの JSON を結合する
+[
+  note_entries_2025,
+].forEach(entries => {
+  allEntries = allEntries.concat(entries);
+  console.log(`allEntries length: ${allEntries.length}`);
+});
+
+/**
+ * 検索クエリをデリミタで分割した配列を返す。
+ * @param {String} input
+ * @returns {Array}
+ */
+function splitInput(input) {
+  const queries = [];
+
+  if (input.length < 1) {
+    return queries;
+  }
+  const splittedInput = input.trim().split(delim);
+
+  // 空文字列を除外する
+  for (let i = 0; i < splittedInput.length; i++) {
+    if (splittedInput[i]) {
+      queries.push(splittedInput[i]);
+    }
+  }
+  return queries;
+}
+
+let oldInput = null;
+
+/**
+ * 検索クエリが変更されているか
+ * @param {Array} splittedInput
+ * @returns {Boolean}
+ */
+function isNewQueries(splittedInput) {
+  return (!oldInput || (splittedInput.join(delim) != oldInput.join(delim)));
+}
+
+/**
+ * Hugo の日付文字列をパースして指定したフォーマットにする
+ * @param {Date} date
+ * @returns String
+ */
+function formatDateString(date) {
+  const dt = new Date(date);
+  const year = dt.getFullYear();
+  const month = ('0' + (dt.getMonth() + 1)).slice(-2);
+  const postDate = ('0' + dt.getDate()).slice(-2);
+  const hour = ('0' + dt.getHours()).slice(-2);
+  const minute = ('0' + dt.getMinutes()).slice(-2);
+
+  return `${year}-${month}-${postDate} ${hour}:${minute}`;
+}
+
+/**
+ * すべてのエントリーから date が最新のものを得る
+ * @returns Object
+ */
+function getLatestEntry() {
+  const sorted = allEntries.sort((a, b) => {
+    return (a.date > b.date) ? -1 : 1;
+  });
+  return sorted[0];
+}
+
+/**
+ * 最新エントリーの日付とタイトルを並べる
+ * @returns String
+ */
+function createLatestHtml() {
+  const entry = getLatestEntry();
+  const date = formatDateString(entry.date);
+  return `（最新： ${date} ${entry.title}）`;
+}
+document.querySelector("#latest").innerHTML = createLatestHtml();
+
+/**
+ * エントリの div タグを組み立てる
+ * @param {String} url エントリの URL
+ * @param {String} title エントリのタイトル
+ * @param {String} body エント
+
