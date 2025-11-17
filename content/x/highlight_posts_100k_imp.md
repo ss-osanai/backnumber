@@ -1,5 +1,5 @@
 ---
-title: "X highlight posts over 100k imp"
+title: "X ハイライト ポスト imp10万超"
 ---
 
 

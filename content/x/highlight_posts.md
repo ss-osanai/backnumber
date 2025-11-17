@@ -1,5 +1,5 @@
 ---
-title: "X highlight posts"
+title: "X ハイライト ポスト"
 ---
 
 
