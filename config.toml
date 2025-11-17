@@ -38,6 +38,9 @@ url = "x/posts"
 [[params.menu]]
 name = "X ハイライト"
 url = "x/highlight_posts"
+[[params.menu]]
+name = "X ハイライト10万超"
+url = "x/highlight_posts_100k_imp"
 
 [[params.menu]]
 name = "文字起こし"
