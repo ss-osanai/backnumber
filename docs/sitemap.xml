@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ss-osanai.github.io/backnumber/transcription/nennpro/251113_ys11/</loc>
+    <lastmod>2025-11-13T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://ss-osanai.github.io/backnumber/transcription/nennpro/251101_y137/</loc>
     <lastmod>2025-11-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -159,16 +162,31 @@
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ss-osanai.github.io/backnumber/raw/2025/</loc>
-    <lastmod>2025-11-14T03:02:48+09:00</lastmod>
+    <lastmod>2025-11-16T19:30:00+09:00</lastmod>
   </url><url>
     <loc>https://ss-osanai.github.io/backnumber/raw/</loc>
-    <lastmod>2025-11-14T03:02:48+09:00</lastmod>
+    <lastmod>2025-11-16T19:30:00+09:00</lastmod>
+  </url><url>
+    <loc>https://ss-osanai.github.io/backnumber/raw/2025/11/251116_1930/</loc>
+    <lastmod>2025-11-16T19:30:00+09:00</lastmod>
+  </url><url>
+    <loc>https://ss-osanai.github.io/backnumber/</loc>
+    <lastmod>2025-11-16T19:30:00+09:00</lastmod>
+  </url><url>
+    <loc>https://ss-osanai.github.io/backnumber/raw/2025/11/251116_0154/</loc>
+    <lastmod>2025-11-16T01:54:17+09:00</lastmod>
+  </url><url>
+    <loc>https://ss-osanai.github.io/backnumber/raw/2025/11/251115_0620/</loc>
+    <lastmod>2025-11-15T06:20:09+09:00</lastmod>
   </url><url>
     <loc>https://ss-osanai.github.io/backnumber/raw/2025/11/251114_0302/</loc>
     <lastmod>2025-11-14T03:02:48+09:00</lastmod>
   </url><url>
-    <loc>https://ss-osanai.github.io/backnumber/</loc>
-    <lastmod>2025-11-14T03:02:48+09:00</lastmod>
+    <loc>https://ss-osanai.github.io/backnumber/transcription/</loc>
+    <lastmod>2025-11-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ss-osanai.github.io/backnumber/transcription/nennpro/</loc>
+    <lastmod>2025-11-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ss-osanai.github.io/backnumber/raw/2025/11/251113_0315/</loc>
     <lastmod>2025-11-13T03:15:03+09:00</lastmod>
@@ -205,12 +223,6 @@
   </url><url>
     <loc>https://ss-osanai.github.io/backnumber/raw/2025/11/251101_1930/</loc>
     <lastmod>2025-11-01T19:30:00+09:00</lastmod>
-  </url><url>
-    <loc>https://ss-osanai.github.io/backnumber/transcription/</loc>
-    <lastmod>2025-11-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ss-osanai.github.io/backnumber/transcription/nennpro/</loc>
-    <lastmod>2025-11-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ss-osanai.github.io/backnumber/raw/2025/11/251101_0231/</loc>
     <lastmod>2025-11-01T02:31:15+09:00</lastmod>
@@ -31777,9 +31789,11 @@
   </url><url>
     <loc>https://ss-osanai.github.io/backnumber/tags/</loc>
   </url><url>
+    <loc>https://ss-osanai.github.io/backnumber/x/posts/</loc>
+  </url><url>
     <loc>https://ss-osanai.github.io/backnumber/x/highlight_posts/</loc>
   </url><url>
-    <loc>https://ss-osanai.github.io/backnumber/x/posts/</loc>
+    <loc>https://ss-osanai.github.io/backnumber/x/highlight_posts_100k_imp/</loc>
   </url><url>
     <loc>https://ss-osanai.github.io/backnumber/x/</loc>
   </url>
