@@ -29,6 +29,7 @@ let allEntries = [];
   entries_2023,
   entries_2024,
   entries_2025,
+  entries_2026,
 ].forEach(entries => {
   allEntries = allEntries.concat(entries);
   console.log(`allEntries length: ${allEntries.length}`);
