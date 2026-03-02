@@ -16,6 +16,7 @@ raw = "/:sections/:month/:contentbasename"
 note = "/:sections/:month/:contentbasename"
 x = "/:sections/:contentbasename"
 transcription = "/:sections/:contentbasename"
+X2 = "/:sections/:contentbasename"
 
 [outputs]
 home = ["HTML"]
