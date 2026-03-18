@@ -1,6 +1,6 @@
 ---
 title: "思考のピラミッド音源 下巻"
-publishDate: "2020-01-01"
+publishDate: "2020-03-25"
 weight: 50
 draft: false
 ---

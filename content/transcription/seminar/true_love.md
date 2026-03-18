@@ -1,6 +1,6 @@
 ---
 title: "「本気の恋」音源"
-publishDate: "2022-09-21"
+publishDate: "2022-06-11"
 weight: 50
 draft: false
 ---

@@ -1,6 +1,6 @@
 ---
 title: "異形の進化音源"
-publishDate: "2020-01-01"
+publishDate: "2023-06-22"
 weight: 50
 draft: false
 ---

@@ -1,6 +1,6 @@
 ---
 title: "習慣化音源"
-publishDate: "2020-01-01"
+publishDate: "2020-09-26"
 weight: 50
 draft: false
 ---

@@ -1,6 +1,6 @@
 ---
 title: "「既に実現されている未来」音源"
-publishDate: "2022-09-21"
+publishDate: "2022-07-21"
 weight: 50
 draft: false
 ---

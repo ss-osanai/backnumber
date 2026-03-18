@@ -1,6 +1,6 @@
 ---
 title: "物語系自己啓発音源"
-publishDate: "2023-10-25"
+publishDate: "2023-10-19"
 weight: 50
 draft: false
 ---

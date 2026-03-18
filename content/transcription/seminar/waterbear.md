@@ -1,6 +1,6 @@
 ---
-title: "人生クマムシ音源"
-publishDate: "2024-01-13"
+title: "人生クマムシ化音源"
+publishDate: "2022-03-17"
 weight: 50
 draft: false
 ---

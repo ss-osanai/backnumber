@@ -1,6 +1,6 @@
 ---
 title: "編み込み音源"
-publishDate: "2020-01-01"
+publishDate: "2023-01-19"
 weight: 50
 draft: false
 ---

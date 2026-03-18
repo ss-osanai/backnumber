@@ -1,6 +1,6 @@
 ---
 title: "続・直進行軍音源"
-publishDate: "2020-01-01"
+publishDate: "2023-04-20"
 weight: 50
 draft: false
 ---

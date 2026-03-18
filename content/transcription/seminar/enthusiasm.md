@@ -1,6 +1,6 @@
 ---
 title: "「全ては熱狂から始まる」音源"
-publishDate: "2020-01-01"
+publishDate: "2022-09-15"
 weight: 50
 draft: false
 ---

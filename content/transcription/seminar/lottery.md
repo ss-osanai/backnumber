@@ -1,6 +1,6 @@
 ---
 title: "毎日が当選発表日！音源"
-publishDate: "2020-01-01"
+publishDate: "2021-07-11"
 weight: 50
 draft: false
 ---
